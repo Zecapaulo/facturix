@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Astor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Contêiner da lista */
+        .list-inline {
+            max-height: 400px;
+            /* Limita a altura */
+            overflow-y: auto;
+            /* Ativa o scroll vertical */
+            padding: 10px;
+            border-radius: 5px;
+            list-style: none;
+            margin: 0;
+
+            list-style: disc;
+            /* Adiciona pontos à lista */
+        }
+
+        /* Estilização universal do scrollbar */
+        .list-inline {
+            scrollbar-width: thin;
+            /* Define um scroll fino */
+            scrollbar-color: var(--primary-color) #f3f2f2;
+            /* Cor do "thumb" e do trilho */
+        }
+
+        /* Estilo do scroll para navegadores baseados no WebKit */
+        .list-inline::-webkit-scrollbar {
+            width: 1px;
+            /* Largura do scroll */
+        }
+
+        .list-inline::-webkit-scrollbar-thumb {
+            background-color: black;
+            /* Cor preta para o "thumb" */
+            border-radius: 10px;
+            /* Bordas arredondadas */
+        }
+
+        .list-inline::-webkit-scrollbar-track {
+            background: #e0e0e0;
+            /* Cor do trilho */
+        }
+
+        .list-inline li {
+            font-size: 1.3rem;
+        }
+
+
+        /* Estilo da div */
+        .image-container {
+            width: 345px;
+            overflow: hidden;
+            /* Garante que nada ultrapasse os limites da div */
+            position: relative;
+        }
+
+        /* Estilo da imagem */
+        .image-container img {
+            width: 100%;
+            /* Ajusta a largura da imagem ao tamanho da div */
+            height: 100%;
+            /* Ajusta a altura da imagem ao tamanho da div */
+            object-fit: contain;
+            /* Garante que a imagem seja redimensionada sem ser cortada */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbare">
+        <div class="container">
+            <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3">
+                <div class="col-md-3 mb-2 mb-md-0">
+                    <a class="navbar-brand" href="#">
+                        <img src="logo.png.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+                        J. M. Neves
+                    </a>
+                </div>
+
+                <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+                    <li class="nav-item"><a class="nav-link" href="#">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Downloads</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Encomendar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contactar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Ajuda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Sobre</a></li>
+                </ul>
+
+                <div class="col-md-3 text-end">
+                    <button type="button" class="btn btn-primary">
+                        <img src="call.png" alt=""> Suporte</button>
+                </div>
+            </header>
+        </div>
+    </div>
+    <!-- Navbar -->
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="logo.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+                J. M. Neves
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Downloads</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Encomendar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contactar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Ajuda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Sobre</a></li>
+                </ul>
+                <div class="col-md-3 text-end">
+                    <button type="button" class="btn btn-outline-primary me-2">Login</button>
+                    <button type="button" class="btn btn-primary">Sign-up</button>
+                </div>
+            </div>
+        </div>
+    </nav> -->
+
+    <!-- Hero Section -->
+    <section class="header-1">
+        <div class="container">
+            <div class="row align-items-center hero">
+                <div class="col-md-6">
+                    <h1 class="heading-title display-4 fw-bold">Software Astor</h1>
+                    <p class="lead">Software de gestão desde 1987</p>
+                    <p class="lead-p">
+                        A J. M. Neves é uma pequena empresa produtora de Software na área de
+                        Gestão Comercial, Gestão de Pessoal e Contabilidade.
+                        <br>
+                        <br>
+
+                        Tendo já ultrapassado as 6.000 aplicações instaladas, o nosso software
+                        nasceu em 1987 pelas mãos da firma Astormatic e passou, desde 2011, a
+                        ser representado e distribuído por J. M. Neves.
+                        <br>
+                        <br>
+
+                        Siga a hiperligação para conhecer um pouco mais da nossa história.
+                    </p>
+                    <div class="btn-group">
+                        <a href="#" class="btn btn-custom btn-lg me-2">Faturação eletrónica</a>
+                        <a href="#" class="btn btn-custom btn-lg me-2">ATCUD</a>
+                        <a href="#" class="btn btn-custom btn-lg">Últimas atualizações - Acesso rápido</a>
+                    </div>
+                </div>
+                <div class="col-md-6 hero-img">
+                    <img src="web-resource-01.jpg" alt="Office" class="img-fluid rounded">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="produtos">
+
+        <div class="container">
+            <h1 class="mb-4">Produtos</h1>
+            <!-- Tabs -->
+            <div class="tabs">
+                <ul class="nav nav-tabs justify-content-between" id="productTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="gestao-tab" data-bs-toggle="tab" data-bs-target="#gestao"
+                            type="button" role="tab" aria-controls="gestao" aria-selected="true">
+                            Gestão Comercial / Faturação
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="multi-tab" data-bs-toggle="tab" data-bs-target="#multi"
+                            type="button" role="tab" aria-controls="multi" aria-selected="false">
+                            Multi-utilizador (opção)
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="folha-tab" data-bs-toggle="tab" data-bs-target="#folha"
+                            type="button" role="tab" aria-controls="folha" aria-selected="false">
+                            Folha de Obra (opção)
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Tab Content -->
+            <div class="tab-content" id="productTabsContent">
+                <!-- Tab 1 -->
+                <div class="tab-pane fade show active" id="gestao" role="tabpanel" aria-labelledby="gestao-tab">
+                    <h3>Gestão Comercial <b>AstorGes</b> e <b>AstorLite</b></h3>
+                    <p>
+                        Os programas de Gestão Comercial permitem efetuar o controle de stocks,
+                        a faturação e o controle de contas correntes de clientes e fornecedores.
+                    </p>
+                    <p>
+                        O utilizador é conduzido facilmente pelos seus vários menus e o funcionamento
+                        é auto-explicativo, incluindo linhas de ajuda. Para boa utilização basta
+                        ter uma ideia de como todas as rotinas são interligadas.
+                    </p>
+                    <p>Existem duas versões base: o <b>AstorGes</b> e o <b>AstorLite</b>.</p>
+                    <p>
+                        O <b>AstorLite</b> é uma versão mais simples e económica do programa de
+                        <b>AstorGes</b>. Tem as mesmas funcionalidades base, mas de uma forma mais
+                        simplificada. Ambas as versões são mono-firma e mono-posto. Opção para
+                        funcionar em sistema multi-utilizador ligado em rede.
+                    </p>
+                    <p>
+                        Consulte também a
+                        <a href="#">tabela com as características e diferenças entre o AstorGes e o AstorLite</a>.
+                    </p>
+                </div>
+
+                <!-- Tab 2 -->
+                <div class="tab-pane fade" id="multi" role="tabpanel" aria-labelledby="multi-tab">
+                    <h3>Multi-utilizador (opção)</h3>
+                    <p>Conteúdo para a aba Multi-utilizador (detalhes adicionais podem ser adicionados aqui).</p>
+                </div>
+
+                <!-- Tab 3 -->
+                <div class="tab-pane fade" id="folha" role="tabpanel" aria-labelledby="folha-tab">
+                    <h3>Folha de Obra (opção)</h3>
+                    <p>Conteúdo para a aba Folha de Obra (detalhes adicionais podem ser adicionados aqui).</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="actualizacoes">
+        <div class="container">
+            <h2 class="h1 mb-4">Ultimas atualizações - Acesso rápido</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="card card-style1 border-0">
+                        <div class="card-body p-0">
+                            <div class="text-center mb-2-3 mb-lg-6">
+
+                            </div>
+                            <div id="accordion" class="accordion-style">
+                                <div class="card mb-3">
+                                    <div class="card-header" id="headingOne">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link" data-bs-toggle="collapse"
+                                                data-bs-target="#collapseOne" aria-expanded="true"
+                                                aria-controls="collapseOne"><span
+                                                    class="text-theme-secondary me-2">Atualização 1:</span>Integração de
+                                                novos
+                                                módulos de relatórios <span class="float-right"><i
+                                                        class="fa fa-calendar"></i>
+                                                    12/12/2024</span></button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                                        data-bs-parent="#accordion">
+                                        <div class="card-body">
+                                            Esta atualização inclui novos módulos de relatórios financeiros e
+                                            operacionais, permitindo maior personalização e
+                                            eficiência nas análises.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card mb-3">
+                                    <div class="card-header" id="headingTwo">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" data-bs-toggle="collapse"
+                                                data-bs-target="#collapseTwo" aria-expanded="false"
+                                                aria-controls="collapseTwo"><span
+                                                    class="text-theme-secondary me-2">Atualização 2:</span> Melhorias no
+                                                sistema de notificações<span class="float-right"><i
+                                                        class="fa fa-calendar"></i> 12/12/2024</span></button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                        data-bs-parent="#accordion">
+                                        <div class="card-body">
+                                            A partir desta atualização, o sistema de notificações foi otimizado para
+                                            alertar automaticamente sobre pendências
+                                            fiscais e vencimentos.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card mb-3">
+                                    <div class="card-header" id="headingThree">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" data-bs-toggle="collapse"
+                                                data-bs-target="#collapseThree" aria-expanded="false"
+                                                aria-controls="collapseThree"><span
+                                                    class="text-theme-secondary me-2">Atualização 3:</span> Ajustes no
+                                                módulo de faturamento para compliance <span class="float-right"><i class="fa fa-calendar"></i>
+                                                    12/12/2024</span></button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                        data-bs-parent="#accordion">
+                                        <div class="card-body">
+                                            O sistema de faturamento foi ajustado para atender novas regulamentações
+                                            fiscais em Moçambique, garantindo conformidade
+                                            automática.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card mb-3">
+                                    <div class="card-header" id="headingFour">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" data-bs-toggle="collapse"
+                                                data-bs-target="#collapseFour" aria-expanded="false"
+                                                aria-controls="collapseFour"><span
+                                                    class="text-theme-secondary me-2">Atualização 4:</span>
+                                                Implementação de segurança avançada
+                                                a double eagle?<span class="float-right"><i class="fa fa-calendar"></i>
+                                                    12/12/2024</span></button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
+                                        data-bs-parent="#accordion">
+                                        <div class="card-body">
+                                            A segurança foi aprimorada com a implementação de autenticação de dois
+                                            fatores e criptografia avançada para proteger
+                                            dados sensíveis.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="headingFive">
+                                        <h5 class="mb-0">
+                                            <button class="btn btn-link collapsed" data-bs-toggle="collapse"
+                                                data-bs-target="#collapseFive" aria-expanded="false"
+                                                aria-controls="collapseFive"><span
+                                                    class="text-theme-secondary me-2">Atualização 5:</span> Nova
+                                                interface de usuário mais intuitiva<span class="float-right"><i
+                                                        class="fa fa-calendar"></i> 12/12/2024</span> </button>
+                                        </h5>
+                                    </div>
+                                    <div id="collapseFive" class="collapse" aria-labelledby="headingFive"
+                                        data-bs-parent="#accordion">
+                                        <div class="card-body">
+                                            A interface do usuário foi redesenhada para ser mais amigável, facilitando o
+                                            acesso rápido às funcionalidades mais
+                                            utilizadas.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="produtos">
+
+        <div class="container">
+            <h1 class="mb-4">Produtos</h1>
+            <!-- Tabs -->
+            <div class="tabs">
+                <ul class="nav nav-tabs justify-content-between" id="productTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="gestao-tab" data-bs-toggle="tab" data-bs-target="#gestao"
+                            type="button" role="tab" aria-controls="gestao" aria-selected="true">
+                            Gestão Comercial / Faturação
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="multi-tab" data-bs-toggle="tab" data-bs-target="#multi"
+                            type="button" role="tab" aria-controls="multi" aria-selected="false">
+                            Multi-utilizador (opção)
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="folha-tab" data-bs-toggle="tab" data-bs-target="#folha"
+                            type="button" role="tab" aria-controls="folha" aria-selected="false">
+                            Folha de Obra (opção)
+                        </button>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Tab Content -->
+            <div class="tab-content" id="productTabsContent">
+                <!-- Tab 1 -->
+                <div class="tab-pane fade show active" id="gestao" role="tabpanel" aria-labelledby="gestao-tab">
+                    <h3>Gestão Comercial <b>AstorGes</b> e <b>AstorLite</b></h3>
+                    <p>
+                        Os programas de Gestão Comercial permitem efetuar o controle de stocks,
+                        a faturação e o controle de contas correntes de clientes e fornecedores.
+                    </p>
+                    <p>
+                        O utilizador é conduzido facilmente pelos seus vários menus e o funcionamento
+                        é auto-explicativo, incluindo linhas de ajuda. Para boa utilização basta
+                        ter uma ideia de como todas as rotinas são interligadas.
+                    </p>
+                    <p>Existem duas versões base: o <b>AstorGes</b> e o <b>AstorLite</b>.</p>
+                    <p>
+                        O <b>AstorLite</b> é uma versão mais simples e económica do programa de
+                        <b>AstorGes</b>. Tem as mesmas funcionalidades base, mas de uma forma mais
+                        simplificada. Ambas as versões são mono-firma e mono-posto. Opção para
+                        funcionar em sistema multi-utilizador ligado em rede.
+                    </p>
+                    <p>
+                        Consulte também a
+                        <a href="#">tabela com as características e diferenças entre o AstorGes e o AstorLite</a>.
+                    </p>
+                </div>
+
+                <!-- Tab 2 -->
+                <div class="tab-pane fade" id="multi" role="tabpanel" aria-labelledby="multi-tab">
+                    <h3>Multi-utilizador (opção)</h3>
+                    <p>Conteúdo para a aba Multi-utilizador (detalhes adicionais podem ser adicionados aqui).</p>
+                </div>
+
+                <!-- Tab 3 -->
+                <div class="tab-pane fade" id="folha" role="tabpanel" aria-labelledby="folha-tab">
+                    <h3>Folha de Obra (opção)</h3>
+                    <p>Conteúdo para a aba Folha de Obra (detalhes adicionais podem ser adicionados aqui).</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="precos">
+        <div class="container">
+            <h2 class="mb-4">Últimas atualizações - Acesso rápido</h2>
+            <div class="pricing3 ">
+                <div class="row">
+                    <div class="col-lg-2 col-md-3 align-self-center">
+                        <div class="nav flex-column nav-pills" role="tablist">
+                            <a class="nav-link" id="p3-1-tab" data-toggle="pill" href="#p3-1" role="tab"
+                                aria-controls="p3-1" aria-selected="false">
+                                <h5>Facturix Tesouraria</h5>
+                            </a>
+                            <a class="nav-link active" id="p3-2-tab" data-toggle="pill" href="#p3-2" role="tab"
+                                aria-controls="p3-2" aria-selected="false">
+                                <h5>Facturix Gestão Comercial</h5>
+                            </a>
+                            <a class="nav-link" id="p3-3-tab" data-toggle="pill" href="#p3-3" role="tab"
+                                aria-controls="p3-3" aria-selected="false">
+                                <h5>Facturix Restaurante</h5>
+                            </a>
+                            <a class="nav-link" id="p3-4-tab" data-toggle="pill" href="#p3-4" role="tab"
+                                aria-controls="p3-4" aria-selected="false">
+                                <h5>Facturix <br> Salarios</h5>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-10 col-md-9">
+                        <div class="tab-content">
+                            <div class="tab-pane fade" id="p3-1" role="tabpanel" aria-labelledby="p3-1-tab">
+                                <div class="row">
+                                    <!-- Column  -->
+                                    <div class="col-lg-7">
+                                        <div class="pricing-box">
+                                            <h2 class="text-uppercase title mb-0">Facturix Gestão Comercial</h2>
+                                            <h6 class="subtitle">características</h6>
+                                            <ul class="list-inline">
+                                                <li>Gestão de Clientes e Fornecedores</li>
+                                                <li>Gestão de Utilizadores</li>
+                                                <li>Gestão de Stocks</li>
+                                                <li>Ajuste de Preços Automático</li>
+                                                <li>Movimentos entre Armazéns</li>
+                                                <li>Compatibilidade entre Produtos</li>
+                                                <li>Produto Composto</li>
+                                                <li>Lotes e Prazos de Validade nos Produtos</li>
+                                                <li>Controle de Inventário</li>
+                                                <li>Documentos de Faturação</li>
+                                                <li>Motivos de Isenção</li>
+                                                <li>Conversão de Documentos para PDF/Excel</li>
+                                                <li>Cópia de Linhas para Documentos</li>
+                                                <li>Mensagens de Rodapé nos Documentos</li>
+                                                <li>Recibos para Clientes</li>
+                                                <li>Controle Completo de Cobranças a Clientes</li>
+                                                <li>Compras a Fornecedores</li>
+                                                <li>Pagamentos a Fornecedores</li>
+                                                <li>Gestão de Comissões para Vendedores</li>
+                                                <li>Documento Teste Covid para Clínicas</li>
+                                            </ul>
+                                            <div class="d-flex align-items-center justify-content-between p-4">
+                                                <span
+                                                    class="display-5 text-dark mr-3 vm font-weight-medium">35.000,00MZN/Mes</span>
+                                                <button type="button" class="btn btn-primary">
+                                                    <img src="call.png" alt=""> Suporte</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Column  -->
+                                    <div class="col-lg-5 bg-image text-center align-items-end position-relative d-flex">
+                                        <div class="image-container">
+                                            <img src="ft.png" alt="Imagem">
+                                        </div>
+                                    </div>
+                                    <!-- Column  -->
+                                </div>
+                            </div>
+                            <div class="tab-pane fade  show active" id="p3-2" role="tabpanel"
+                                aria-labelledby="p3-2-tab">
+                                <div class="row">
+                                    <!-- Column  -->
+                                    <div class="col-lg-7">
+                                        <div class="pricing-box">
+                                            <h2 class="text-uppercase title mb-0">Facturix Gestão Comercial</h2>
+                                            <h6 class="subtitle">características</h6>
+                                            <ul class="list-inline">
+                                                <li>Gestão de Clientes e Fornecedores</li>
+                                                <li>Gestão de Utilizadores</li>
+                                                <li>Gestão de Stocks</li>
+                                                <li>Ajuste de Preços Automático</li>
+                                                <li>Movimentos entre Armazéns</li>
+                                                <li>Compatibilidade entre Produtos</li>
+                                                <li>Produto Composto</li>
+                                                <li>Lotes e Prazos de Validade nos Produtos</li>
+                                                <li>Controle de Inventário</li>
+                                                <li>Documentos de Faturação</li>
+                                                <li>Motivos de Isenção</li>
+                                                <li>Conversão de Documentos para PDF/Excel</li>
+                                                <li>Cópia de Linhas para Documentos</li>
+                                                <li>Mensagens de Rodapé nos Documentos</li>
+                                                <li>Recibos para Clientes</li>
+                                                <li>Controle Completo de Cobranças a Clientes</li>
+                                                <li>Compras a Fornecedores</li>
+                                                <li>Pagamentos a Fornecedores</li>
+                                                <li>Gestão de Comissões para Vendedores</li>
+                                                <li>Documento Teste Covid para Clínicas</li>
+                                            </ul>
+                                            <div class="d-flex align-items-center justify-content-between p-4">
+                                                <span
+                                                    class="display-5 text-dark mr-3 vm font-weight-medium">35.000,00MZN/Mes</span>
+                                                <button type="button" class="btn btn-primary">
+                                                    <img src="call.png" alt=""> Suporte</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Column  -->
+                                    <div class="col-lg-5 bg-image text-center align-items-end position-relative d-flex">
+                                        <div class="image-container">
+                                            <img src="fg.png" alt="Imagem">
+                                        </div>
+                                    </div>
+                                    <!-- Column  -->
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="p3-3" role="tabpanel" aria-labelledby="p3-3-tab">
+                                <div class="row">
+                                    <!-- Column  -->
+                                    <div class="col-lg-7">
+                                        <div class="pricing-box">
+                                            <h2 class="text-uppercase title mb-0">Facturix Gestão Comercial</h2>
+                                            <h6 class="subtitle">características</h6>
+                                            <ul class="list-inline">
+                                                <li>Gestão de Clientes e Fornecedores</li>
+                                                <li>Gestão de Utilizadores</li>
+                                                <li>Gestão de Stocks</li>
+                                                <li>Ajuste de Preços Automático</li>
+                                                <li>Movimentos entre Armazéns</li>
+                                                <li>Compatibilidade entre Produtos</li>
+                                                <li>Produto Composto</li>
+                                                <li>Lotes e Prazos de Validade nos Produtos</li>
+                                                <li>Controle de Inventário</li>
+                                                <li>Documentos de Faturação</li>
+                                                <li>Motivos de Isenção</li>
+                                                <li>Conversão de Documentos para PDF/Excel</li>
+                                                <li>Cópia de Linhas para Documentos</li>
+                                                <li>Mensagens de Rodapé nos Documentos</li>
+                                                <li>Recibos para Clientes</li>
+                                                <li>Controle Completo de Cobranças a Clientes</li>
+                                                <li>Compras a Fornecedores</li>
+                                                <li>Pagamentos a Fornecedores</li>
+                                                <li>Gestão de Comissões para Vendedores</li>
+                                                <li>Documento Teste Covid para Clínicas</li>
+                                            </ul>
+                                            <div class="d-flex align-items-center justify-content-between p-4">
+                                                <span
+                                                    class="display-5 text-dark mr-3 vm font-weight-medium">35.000,00MZN/Mes</span>
+                                                <button type="button" class="btn btn-primary">
+                                                    <img src="call.png" alt=""> Suporte</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Column  -->
+                                    <div class="col-lg-5 bg-image text-center align-items-end position-relative d-flex">
+                                        <div class="image-container">
+                                            <img src="fr.png" alt="Imagem">
+                                        </div>
+                                    </div>
+                                    <!-- Column  -->
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="p3-4" role="tabpanel" aria-labelledby="p3-4-tab">
+                                <div class="row">
+                                    <!-- Column  -->
+                                    <div class="col-lg-7">
+                                        <div class="pricing-box">
+                                            <h2 class="text-uppercase title mb-0">Facturix Gestão Comercial</h2>
+                                            <h6 class="subtitle">características</h6>
+                                            <ul class="list-inline">
+                                                <li>Gestão de Clientes e Fornecedores</li>
+                                                <li>Gestão de Utilizadores</li>
+                                                <li>Gestão de Stocks</li>
+                                                <li>Ajuste de Preços Automático</li>
+                                                <li>Movimentos entre Armazéns</li>
+                                                <li>Compatibilidade entre Produtos</li>
+                                                <li>Produto Composto</li>
+                                                <li>Lotes e Prazos de Validade nos Produtos</li>
+                                                <li>Controle de Inventário</li>
+                                                <li>Documentos de Faturação</li>
+                                                <li>Motivos de Isenção</li>
+                                                <li>Conversão de Documentos para PDF/Excel</li>
+                                                <li>Cópia de Linhas para Documentos</li>
+                                                <li>Mensagens de Rodapé nos Documentos</li>
+                                                <li>Recibos para Clientes</li>
+                                                <li>Controle Completo de Cobranças a Clientes</li>
+                                                <li>Compras a Fornecedores</li>
+                                                <li>Pagamentos a Fornecedores</li>
+                                                <li>Gestão de Comissões para Vendedores</li>
+                                                <li>Documento Teste Covid para Clínicas</li>
+                                            </ul>
+                                            <div class="d-flex align-items-center justify-content-between p-4">
+                                                <span
+                                                    class="display-5 text-dark mr-3 vm font-weight-medium">35.000,00MZN/Mes</span>
+                                                <button type="button" class="btn btn-primary">
+                                                    <img src="call.png" alt=""> Suporte</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Column  -->
+                                    <div class="col-lg-5 bg-image text-center align-items-end position-relative d-flex">
+                                        <div class="image-container">
+                                            <img src="fs.png" alt="Imagem">
+                                        </div>
+                                    </div>
+                                    <!-- Column  -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark footer">
+        <div class="footer-top py-8">
+            <div class="container">
+                <div class="row gy-5">
+                    <div class="col-lg-8 pe-xxl-10">
+                        <div class="row gy-5">
+                            <div class="col-6 col-lg-4">
+                                <h5 class="text-white footer-title-01">A propos</h5>
+                                <ul class="list-unstyled footer-link-01 m-0">
+                                    <li><a class="text-white text-opacity-75" href="#">About Us</a></li>
+                                    <li><a class="text-white text-opacity-75" href="#">Blog</a></li>
+                                    <li><a class="text-white text-opacity-75" href="#">Our ingredients</a></li>
+                                    <li><a class="text-white text-opacity-75" href="#">Our resellers</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-6 col-lg-4">
+                                <h5 class="text-white footer-title-01">About</h5>
+                                <ul class="list-unstyled footer-link-01 m-0">
+                                    <li><a class="text-white text-opacity-75" href="#">Customer Service</a></li>
+                                    <li><a class="text-white text-opacity-75" href="#">Privacy Policy</a></li>
+                                    <li><a class="text-white text-opacity-75" href="#">Cookie Policy</a></li>
+                                    <li><a class="text-white text-opacity-75" href="#">Terms &amp; Conditions</a></li>
+                                    <li><a class="text-white text-opacity-75" href="#">Terms of Use</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-6 col-lg-4">
+                                <h5 class="text-white footer-title-01">Need Help?</h5>
+                                <ul class="list-unstyled footer-link-01 m-0">
+                                    <li><a class="text-white text-opacity-75" href="#">Contact Us</a></li>
+                                    <li><a class="text-white text-opacity-75" href="#">FAQs</a></li>
+                                    <li><a class="text-white text-opacity-75" href="#">Offers &amp; Kits</a></li>
+                                    <li><a class="text-white text-opacity-75" href="#">Get the app</a></li>
+                                    <li><a class="text-white text-opacity-75" href="#">Store locator</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <h5 class="text-white footer-title-01 fs-5">Subscribe to our newsletter and get 15% off your
+                            next
+                            order.</h5>
+                        <div>
+                            <form class="d-flex flex-row mb-2 p-1 bg-white input-group"><input type="email"
+                                    class="form-control rounded border-0" placeholder="Your Email"> <button
+                                    class="btn btn-secondary flex-shrink-0" type="submit">Subscribe</button></form>
+                            <p class="fs-sm text-white text-opacity-75">I agree to receive Absolution newsletters</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom small py-3 border-top border-white border-opacity-10">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start py-1">
+                        <p class="m-0 text-white text-opacity-75">© 2022 copyright by <a class="text-reset"
+                                href="#">bootdey.com</a></p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end py-1">
+                        <ul class="nav justify-content-center justify-content-md-end list-unstyled footer-link-01 m-0">
+                            <li class="p-0 mx-3 ms-md-0 me-md-3"><a href="#" class="text-white text-opacity-75">Privace
+                                    &amp; Policy</a></li>
+                            <li class="p-0 mx-3 ms-md-0 me-md-3"><a href="#"
+                                    class="text-white text-opacity-75">Faq's</a>
+                            </li>
+                            <li class="p-0 mx-3 ms-md-0 me-md-3"><a href="#" class="text-white text-opacity-75">Get a
+                                    Quote</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- FIM DO FOOTER -->
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
