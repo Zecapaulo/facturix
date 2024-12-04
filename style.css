@@ -1,18 +1,27 @@
         body {
             background: #004c70;
             color: white;
+            font-size: 1.3rem;
         }
 
         :root {
-            --primary-color: #4c7397 !important;
+            --primary-color: rgb(55, 125, 159) !important;
             --secondary-color: #004c70;
-            --background-color: #f5f5f5;
-            --text-color: #333;
+            --background-color: rgb(66 82 250);
+            --text-color: #000000;
             --card-border-radius: 10px;
             --card-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             --btn-hover-color: rgb(30, 72, 111);
+            --white-color: #fff;
         }
 
+        .nav-link:hover {
+            color: #377d9f !important;
+        }
+
+        .nav-link.active {
+            color: #377d9f !important;
+        }
 
         p {
             font-size: 1.3rem;
@@ -21,6 +30,7 @@
         .hero {
             padding: 50px 20px;
             border-radius: 10px;
+            padding-top: 10rem;
         }
 
         .float-right {
@@ -28,11 +38,21 @@
         }
 
         .nav-link {
-            color: white !important;
+            color: rgb(0, 0, 0) !important;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        .title {
+            padding: 0 0 3rem 0;
         }
 
         .navbare {
-            background: linear-gradient(#1a1a1a, #404040) !important;
+            background: #fff;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 0 60px rgba(0, 0, 0, 0.1);
         }
 
         .container {
@@ -47,7 +67,7 @@
         }
 
         .header-1 {
-            background: linear-gradient(to right, #073b4d, #2e809c);
+            background: #001F3F;
         }
 
         header .text-end {
@@ -57,15 +77,16 @@
         .text-end button {
             align-items: center;
             display: flex;
+            background-color: #377d9f;
+            color: white;
         }
 
         .heading-title {
-            color: #f9e79b !important;
+            color: #ffffff !important;
             font-size: 4.5rem;
             background-image: none;
             text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
             margin: -1px 0 0;
-            text-align: center;
             padding: 0;
             word-wrap: break-word;
             position: relative;
@@ -74,8 +95,7 @@
         .lead {
             text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
             margin: 7px 0 0;
-            text-align: center;
-            color: #f9e79b !important;
+            color: #ffffff !important;
             font-weight: 400;
             font-size: 1.125rem;
             line-height: 1.2;
@@ -103,8 +123,15 @@
             margin: 30px auto 0 0;
         }
 
+        .btn-primary {
+            background-color: #fff;
+            color: var(--text-color);
+            border: none;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
         .btn-custom {
-            border: 2px solid #fff;
             font-size: 0.9375rem;
             --animation-custom_in-translate_x: 0px;
             --animation-custom_in-translate_y: 0px;
@@ -113,8 +140,8 @@
             --animation-custom_in-scale: 1;
             text-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
             border-style: solid;
-            box-shadow: 2px 2px 4px 0px rgba(76, 115, 151, 1);
-            background-image: none;
+            /* box-shadow: 2px 2px 4px 0px rgba(76, 115, 151, 1); */
+            background: #4DA8DA;
             margin: 0 2px 0 0;
             padding: 6px 14px;
             color: #fff;
@@ -131,11 +158,11 @@
 
         .nav-tabs .nav-link {
             color: #ffffff !important;
-            background-color: var(--primary-color);
+            background-color: rgb(0, 31, 63);
             border: none;
             font-size: 1.5rem;
             background-image: none;
-            padding: 10px 80px;
+            padding: 10px 60px;
         }
 
         .nav-tabs .nav-link:hover {
@@ -148,7 +175,12 @@
             border: none;
             font-size: 1.5rem;
             background-image: none;
-            padding: 10px 80px;
+            padding: 10px 15px;
+        }
+
+        .text-bg-primary {
+            color: #fff !important;
+            background-color: #001F3F !important;
         }
 
         .tab-content {
@@ -243,7 +275,7 @@
         .accordion-style .btn-link {
             color: #ffffff;
             position: relative;
-            background: var(--primary-color);
+            background: rgb(0, 31, 63);
             border: 1px solid #15395a;
             display: block;
             width: 100%;
@@ -374,6 +406,10 @@
         .py-8 {
             padding-top: 3.5rem !important;
             padding-bottom: 3.5rem !important;
+        }
+
+        .footer {
+            background-color: #001F3F;
         }
 
         .footer-link-01 li+li {
