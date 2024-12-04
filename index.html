@@ -4,14 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Software Astor</title>
+    <title>Facturix Software</title>
+    <link rel="icon" type="image/png" href="favicon.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
         /* Contêiner da lista */
         .list-inline {
-            max-height: 400px;
+            max-height: 220px;
             /* Limita a altura */
             overflow-y: auto;
             /* Ativa o scroll vertical */
@@ -28,7 +29,7 @@
         .list-inline {
             scrollbar-width: thin;
             /* Define um scroll fino */
-            scrollbar-color: var(--primary-color) #f3f2f2;
+            scrollbar-color: rgb(0, 31, 63) #f3f2f2;
             /* Cor do "thumb" e do trilho */
         }
 
@@ -65,12 +66,20 @@
 
         /* Estilo da imagem */
         .image-container img {
-            width: 100%;
+            /* width: 100%; */
             /* Ajusta a largura da imagem ao tamanho da div */
-            height: 100%;
+            /* height: 100%; */
             /* Ajusta a altura da imagem ao tamanho da div */
             object-fit: contain;
             /* Garante que a imagem seja redimensionada sem ser cortada */
+        }
+
+        .product-img {
+            max-width: 100%;
+            height: auto;
+            vertical-align: middle;
+            justify-content: center;
+            height: 232px;
         }
     </style>
 </head>
@@ -79,15 +88,14 @@
     <div class="navbare">
         <div class="container">
             <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3">
-                <div class="col-md-3 mb-2 mb-md-0">
+                <div class="mb-2 mb-md-0">
                     <a class="navbar-brand" href="#">
-                        <img src="logo.png.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
-                        J. M. Neves
+                        <img src="logo.png" alt="Logo" height="28" class="d-inline-block align-text-top">
                     </a>
                 </div>
 
                 <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-                    <li class="nav-item"><a class="nav-link" href="#">Início</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Início</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Downloads</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Encomendar</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Contactar</a></li>
@@ -97,7 +105,7 @@
 
                 <div class="col-md-3 text-end">
                     <button type="button" class="btn btn-primary">
-                        <img src="call.png" alt=""> Suporte</button>
+                        <i class="fa fa-headset m-2"></i> Suporte</button>
                 </div>
             </header>
         </div>
@@ -134,30 +142,30 @@
         <div class="container">
             <div class="row align-items-center hero">
                 <div class="col-md-6">
-                    <h1 class="heading-title display-4 fw-bold">Software Astor</h1>
-                    <p class="lead">Software de gestão desde 1987</p>
+                    <h1 class="heading-title display-4 fw-bold">Facturix Softwares</h1>
+                    <p class="lead">Softwares de gestão, Restaurante, Tesouraria e salario.</p>
                     <p class="lead-p">
-                        A J. M. Neves é uma pequena empresa produtora de Software na área de
-                        Gestão Comercial, Gestão de Pessoal e Contabilidade.
-                        <br>
-                        <br>
-
-                        Tendo já ultrapassado as 6.000 aplicações instaladas, o nosso software
-                        nasceu em 1987 pelas mãos da firma Astormatic e passou, desde 2011, a
-                        ser representado e distribuído por J. M. Neves.
-                        <br>
-                        <br>
-
-                        Siga a hiperligação para conhecer um pouco mais da nossa história.
+                        Facturix é uma poderosa solução de software desenvolvida para atender às necessidades
+                        específicas de empresas em
+                        diferentes setores. <br> Cada módulo do Facturix foi projetado para um propósito
+                        específico, garantindo alta eficiência e personalização. <br><br>
+                    <ul>
+                        <li><strong>Facturix Restaurante:</strong> Gerencia pedidos, estoques, pagamentos e relatórios
+                            financeiros.</li>
+                        <li><strong>Facturix Salários:</strong> Automatiza a folha de pagamento, impostos e benefícios.
+                        </li>
+                        <li><strong>Facturix Tesouraria:</strong> Controla fluxos de caixa, contas a pagar/receber e
+                            relatórios.</li>
+                        <li><strong>Facturix Gestão Comercial:</strong> Administra vendas, estoques e otimiza processos
+                            comerciais.</li>
+                    </ul>
                     </p>
                     <div class="btn-group">
-                        <a href="#" class="btn btn-custom btn-lg me-2">Faturação eletrónica</a>
-                        <a href="#" class="btn btn-custom btn-lg me-2">ATCUD</a>
-                        <a href="#" class="btn btn-custom btn-lg">Últimas atualizações - Acesso rápido</a>
+                        <button type="button" class="btn btn-primary"> Saiber Mais</button>
                     </div>
                 </div>
                 <div class="col-md-6 hero-img">
-                    <img src="web-resource-01.jpg" alt="Office" class="img-fluid rounded">
+                    <img src="web.png" alt="Office" class="img-fluid rounded">
                 </div>
             </div>
         </div>
@@ -179,13 +187,19 @@
                     <li class="nav-item" role="presentation">
                         <button class="nav-link" id="multi-tab" data-bs-toggle="tab" data-bs-target="#multi"
                             type="button" role="tab" aria-controls="multi" aria-selected="false">
-                            Multi-utilizador (opção)
+                            Facturix Tesouraria
                         </button>
                     </li>
                     <li class="nav-item" role="presentation">
                         <button class="nav-link" id="folha-tab" data-bs-toggle="tab" data-bs-target="#folha"
                             type="button" role="tab" aria-controls="folha" aria-selected="false">
-                            Folha de Obra (opção)
+                            Facturix Restaurante
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="folha-tab" data-bs-toggle="tab" data-bs-target="#salario"
+                            type="button" role="tab" aria-controls="salario" aria-selected="false">
+                            Facturix Salario
                         </button>
                     </li>
                 </ul>
@@ -195,23 +209,51 @@
             <div class="tab-content" id="productTabsContent">
                 <!-- Tab 1 -->
                 <div class="tab-pane fade show active" id="gestao" role="tabpanel" aria-labelledby="gestao-tab">
-                    <h3>Gestão Comercial <b>AstorGes</b> e <b>AstorLite</b></h3>
-                    <p>
-                        Os programas de Gestão Comercial permitem efetuar o controle de stocks,
-                        a faturação e o controle de contas correntes de clientes e fornecedores.
-                    </p>
-                    <p>
-                        O utilizador é conduzido facilmente pelos seus vários menus e o funcionamento
-                        é auto-explicativo, incluindo linhas de ajuda. Para boa utilização basta
-                        ter uma ideia de como todas as rotinas são interligadas.
-                    </p>
-                    <p>Existem duas versões base: o <b>AstorGes</b> e o <b>AstorLite</b>.</p>
-                    <p>
-                        O <b>AstorLite</b> é uma versão mais simples e económica do programa de
-                        <b>AstorGes</b>. Tem as mesmas funcionalidades base, mas de uma forma mais
-                        simplificada. Ambas as versões são mono-firma e mono-posto. Opção para
-                        funcionar em sistema multi-utilizador ligado em rede.
-                    </p>
+                    <h3><b>Facturix</b> Gestão Comercial</h3>
+                    <div class="row">
+                        <!-- Column  -->
+                        <div class="col-lg-7">
+                            <div class="pricing-box">
+                                <h4 class="subtitle">características</h4>
+                                <ul class="list-inline">
+                                    <li>Gestão de Clientes e Fornecedores</li>
+                                    <li>Gestão de Utilizadores</li>
+                                    <li>Gestão de Stocks</li>
+                                    <li>Ajuste de Preços Automático</li>
+                                    <li>Movimentos entre Armazéns</li>
+                                    <li>Compatibilidade entre Produtos</li>
+                                    <li>Produto Composto</li>
+                                    <li>Lotes e Prazos de Validade nos Produtos</li>
+                                    <li>Controle de Inventário</li>
+                                    <li>Documentos de Faturação</li>
+                                    <li>Motivos de Isenção</li>
+                                    <li>Conversão de Documentos para PDF/Excel</li>
+                                    <li>Cópia de Linhas para Documentos</li>
+                                    <li>Mensagens de Rodapé nos Documentos</li>
+                                    <li>Recibos para Clientes</li>
+                                    <li>Controle Completo de Cobranças a Clientes</li>
+                                    <li>Compras a Fornecedores</li>
+                                    <li>Pagamentos a Fornecedores</li>
+                                    <li>Gestão de Comissões para Vendedores</li>
+                                    <li>Documento Teste Covid para Clínicas</li>
+                                </ul>
+                                <div class="d-flex align-items-center justify-content-between p-4">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, non? Labore
+                                        suscipit exercitationem ipsam dolore laboriosam, tempore corporis numquam, culpa
+                                        obcaecati fugit, harum maiores error maxime explicabo inventore consequuntur
+                                        beatae!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Column  -->
+                        <div
+                            class="col-lg-5 bg-image text-center justify-content-center align-items-center position-relative d-flex">
+                            <div class="image-container">
+                                <img src="fg.png" alt="Imagem">
+                            </div>
+                        </div>
+                        <!-- Column  -->
+                    </div>
                     <p>
                         Consulte também a
                         <a href="#">tabela com as características e diferenças entre o AstorGes e o AstorLite</a>.
@@ -220,14 +262,161 @@
 
                 <!-- Tab 2 -->
                 <div class="tab-pane fade" id="multi" role="tabpanel" aria-labelledby="multi-tab">
-                    <h3>Multi-utilizador (opção)</h3>
-                    <p>Conteúdo para a aba Multi-utilizador (detalhes adicionais podem ser adicionados aqui).</p>
+                    <h3><b>Facturix</b> Tesouraria</h3>
+                    <div class="row">
+                        <!-- Column  -->
+                        <div class="col-lg-7">
+                            <div class="pricing-box">
+                                <h4 class="subtitle">características</h4>
+                                <ul class="list-inline">
+                                    <li>Gestão de Clientes e Fornecedores</li>
+                                    <li>Gestão de Utilizadores</li>
+                                    <li>Gestão de Stocks</li>
+                                    <li>Ajuste de Preços Automático</li>
+                                    <li>Movimentos entre Armazéns</li>
+                                    <li>Compatibilidade entre Produtos</li>
+                                    <li>Produto Composto</li>
+                                    <li>Lotes e Prazos de Validade nos Produtos</li>
+                                    <li>Controle de Inventário</li>
+                                    <li>Documentos de Faturação</li>
+                                    <li>Motivos de Isenção</li>
+                                    <li>Conversão de Documentos para PDF/Excel</li>
+                                    <li>Cópia de Linhas para Documentos</li>
+                                    <li>Mensagens de Rodapé nos Documentos</li>
+                                    <li>Recibos para Clientes</li>
+                                    <li>Controle Completo de Cobranças a Clientes</li>
+                                    <li>Compras a Fornecedores</li>
+                                    <li>Pagamentos a Fornecedores</li>
+                                    <li>Gestão de Comissões para Vendedores</li>
+                                    <li>Documento Teste Covid para Clínicas</li>
+                                </ul>
+                                <div class="d-flex align-items-center justify-content-between p-4">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, non? Labore
+                                        suscipit exercitationem ipsam dolore laboriosam, tempore corporis numquam, culpa
+                                        obcaecati fugit, harum maiores error maxime explicabo inventore consequuntur
+                                        beatae!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Column  -->
+                        <div
+                            class="col-lg-5 bg-image text-center justify-content-center align-items-center position-relative d-flex">
+                            <div class="image-container">
+                                <img src="ft.png" alt="Imagem">
+                            </div>
+                        </div>
+                        <!-- Column  -->
+                    </div>
+                    <p>
+                        Consulte também a
+                        <a href="#">tabela com as características e diferenças entre o AstorGes e o AstorLite</a>.
+                    </p>
                 </div>
 
                 <!-- Tab 3 -->
                 <div class="tab-pane fade" id="folha" role="tabpanel" aria-labelledby="folha-tab">
-                    <h3>Folha de Obra (opção)</h3>
-                    <p>Conteúdo para a aba Folha de Obra (detalhes adicionais podem ser adicionados aqui).</p>
+                    <h3><b>Facturix</b> Restaurante</h3>
+                    <div class="row">
+                        <!-- Column  -->
+                        <div class="col-lg-7">
+                            <div class="pricing-box">
+                                <h4 class="subtitle">características</h4>
+                                <ul class="list-inline">
+                                    <li>Gestão de Clientes e Fornecedores</li>
+                                    <li>Gestão de Utilizadores</li>
+                                    <li>Gestão de Stocks</li>
+                                    <li>Ajuste de Preços Automático</li>
+                                    <li>Movimentos entre Armazéns</li>
+                                    <li>Compatibilidade entre Produtos</li>
+                                    <li>Produto Composto</li>
+                                    <li>Lotes e Prazos de Validade nos Produtos</li>
+                                    <li>Controle de Inventário</li>
+                                    <li>Documentos de Faturação</li>
+                                    <li>Motivos de Isenção</li>
+                                    <li>Conversão de Documentos para PDF/Excel</li>
+                                    <li>Cópia de Linhas para Documentos</li>
+                                    <li>Mensagens de Rodapé nos Documentos</li>
+                                    <li>Recibos para Clientes</li>
+                                    <li>Controle Completo de Cobranças a Clientes</li>
+                                    <li>Compras a Fornecedores</li>
+                                    <li>Pagamentos a Fornecedores</li>
+                                    <li>Gestão de Comissões para Vendedores</li>
+                                    <li>Documento Teste Covid para Clínicas</li>
+                                </ul>
+                                <div class="d-flex align-items-center justify-content-between p-4">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, non? Labore
+                                        suscipit exercitationem ipsam dolore laboriosam, tempore corporis numquam, culpa
+                                        obcaecati fugit, harum maiores error maxime explicabo inventore consequuntur
+                                        beatae!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Column  -->
+                        <div
+                            class="col-lg-5 bg-image text-center justify-content-center align-items-center position-relative d-flex">
+                            <div class="image-container">
+                                <img src="fr.png" alt="Imagem">
+                            </div>
+                        </div>
+                        <!-- Column  -->
+                    </div>
+                    <p>
+                        Consulte também a
+                        <a href="#">tabela com as características e diferenças entre o AstorGes e o AstorLite</a>.
+                    </p>
+                </div>
+
+                <!-- Tab 4 -->
+                <div class="tab-pane fade" id="salario" role="tabpanel" aria-labelledby="salario-tab">
+                    <h3><b>Facturix</b> Salario</h3>
+                    <div class="row">
+                        <!-- Column  -->
+                        <div class="col-lg-7">
+                            <div class="pricing-box">
+                                <h4 class="subtitle">características</h4>
+                                <ul class="list-inline">
+                                    <li>Gestão de Clientes e Fornecedores</li>
+                                    <li>Gestão de Utilizadores</li>
+                                    <li>Gestão de Stocks</li>
+                                    <li>Ajuste de Preços Automático</li>
+                                    <li>Movimentos entre Armazéns</li>
+                                    <li>Compatibilidade entre Produtos</li>
+                                    <li>Produto Composto</li>
+                                    <li>Lotes e Prazos de Validade nos Produtos</li>
+                                    <li>Controle de Inventário</li>
+                                    <li>Documentos de Faturação</li>
+                                    <li>Motivos de Isenção</li>
+                                    <li>Conversão de Documentos para PDF/Excel</li>
+                                    <li>Cópia de Linhas para Documentos</li>
+                                    <li>Mensagens de Rodapé nos Documentos</li>
+                                    <li>Recibos para Clientes</li>
+                                    <li>Controle Completo de Cobranças a Clientes</li>
+                                    <li>Compras a Fornecedores</li>
+                                    <li>Pagamentos a Fornecedores</li>
+                                    <li>Gestão de Comissões para Vendedores</li>
+                                    <li>Documento Teste Covid para Clínicas</li>
+                                </ul>
+                                <div class="d-flex align-items-center justify-content-between p-4">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, non? Labore
+                                        suscipit exercitationem ipsam dolore laboriosam, tempore corporis numquam, culpa
+                                        obcaecati fugit, harum maiores error maxime explicabo inventore consequuntur
+                                        beatae!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Column  -->
+                        <div
+                            class="col-lg-5 bg-image text-center justify-content-center align-items-center position-relative d-flex">
+                            <div class="image-container">
+                                <img src="fs.png" alt="Imagem">
+                            </div>
+                        </div>
+                        <!-- Column  -->
+                    </div>
+                    <p>
+                        Consulte também a
+                        <a href="#">tabela com as características e diferenças entre o AstorGes e o AstorLite</a>.
+                    </p>
                 </div>
             </div>
         </div>
@@ -294,7 +483,8 @@
                                                 data-bs-target="#collapseThree" aria-expanded="false"
                                                 aria-controls="collapseThree"><span
                                                     class="text-theme-secondary me-2">Atualização 3:</span> Ajustes no
-                                                módulo de faturamento para compliance <span class="float-right"><i class="fa fa-calendar"></i>
+                                                módulo de faturamento para compliance <span class="float-right"><i
+                                                        class="fa fa-calendar"></i>
                                                     12/12/2024</span></button>
                                         </h5>
                                     </div>
@@ -359,295 +549,234 @@
     <section class="produtos">
 
         <div class="container">
-            <h1 class="mb-4">Produtos</h1>
+            <div class="title">
+                <h1 class="">Licenciamento</h1>
+                <h5>Existem dois tipos de licenças. Ambas incluem um ano de suporte e de atualizações gratuitas.</h5>
+            </div>
             <!-- Tabs -->
-            <div class="tabs">
-                <ul class="nav nav-tabs justify-content-between" id="productTabs" role="tablist">
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="gestao-tab" data-bs-toggle="tab" data-bs-target="#gestao"
-                            type="button" role="tab" aria-controls="gestao" aria-selected="true">
-                            Gestão Comercial / Faturação
-                        </button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="multi-tab" data-bs-toggle="tab" data-bs-target="#multi"
-                            type="button" role="tab" aria-controls="multi" aria-selected="false">
-                            Multi-utilizador (opção)
-                        </button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="folha-tab" data-bs-toggle="tab" data-bs-target="#folha"
-                            type="button" role="tab" aria-controls="folha" aria-selected="false">
-                            Folha de Obra (opção)
-                        </button>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Tab Content -->
-            <div class="tab-content" id="productTabsContent">
-                <!-- Tab 1 -->
-                <div class="tab-pane fade show active" id="gestao" role="tabpanel" aria-labelledby="gestao-tab">
-                    <h3>Gestão Comercial <b>AstorGes</b> e <b>AstorLite</b></h3>
-                    <p>
-                        Os programas de Gestão Comercial permitem efetuar o controle de stocks,
-                        a faturação e o controle de contas correntes de clientes e fornecedores.
-                    </p>
-                    <p>
-                        O utilizador é conduzido facilmente pelos seus vários menus e o funcionamento
-                        é auto-explicativo, incluindo linhas de ajuda. Para boa utilização basta
-                        ter uma ideia de como todas as rotinas são interligadas.
-                    </p>
-                    <p>Existem duas versões base: o <b>AstorGes</b> e o <b>AstorLite</b>.</p>
-                    <p>
-                        O <b>AstorLite</b> é uma versão mais simples e económica do programa de
-                        <b>AstorGes</b>. Tem as mesmas funcionalidades base, mas de uma forma mais
-                        simplificada. Ambas as versões são mono-firma e mono-posto. Opção para
-                        funcionar em sistema multi-utilizador ligado em rede.
-                    </p>
-                    <p>
-                        Consulte também a
-                        <a href="#">tabela com as características e diferenças entre o AstorGes e o AstorLite</a>.
-                    </p>
+            <main>
+                <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+                    <div class="col">
+                        <div class="card mb-4 rounded-3 shadow-sm">
+                            <div class="card-header py-3 text-bg-primary">
+                                <h4 class="my-0 fw-normal">LA - Licença Anual</h4>
+                            </div>
+                            <div class="card-body">
+                                <h1 class="card-title pricing-card-title">$0<small
+                                        class="text-body-secondary fw-light">/mo</small>
+                                </h1>
+                                <ul class="list-unstyled mt-3 mb-4">
+                                <ul>
+                                    <li><strong>Renovação:</strong> Anual e obrigatória para manter funcionalidades.</li>
+                                    <li><strong>Atualizações:</strong> Gratuitas por 1 ano.</li>
+                                    <li><strong>Suporte:</strong> Técnico por telefone, email ou remoto (1 hora/ano).</li>
+                                    <li><strong>Preços:</strong> Consulte nossa tabela.</li>
+                                </ul>
+                                </ul>
+                                <button type="button" class="w-100 btn btn-lg btn-outline-primary">Solicitar
+                                    Orçamento</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card mb-4 rounded-3 shadow-sm">
+                            <div class="card-header py-3 text-bg-primary">
+                                <h4 class="my-0 fw-normal">LP - Licença Permanente</h4>
+                            </div>
+                            <div class="card-body">
+                                <h1 class="card-title pricing-card-title">$15<small
+                                        class="text-body-secondary fw-light">/mo</small>
+                                </h1>
+                                <ul class="list-unstyled mt-3 mb-4">
+                                    <li>20 users included</li>
+                                    <li>10 GB of storage</li>
+                                    <li>Priority email support</li>
+                                    <li>Help center access</li>
+                                </ul>
+                                <button type="button" class="w-100 btn btn-lg btn-primary">Solicitar Orçamento</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card mb-4 rounded-3 shadow-sm">
+                            <div class="card-header py-3 text-bg-primary">
+                                <h4 class="my-0 fw-normal">Licença de Utilização</h4>
+                            </div>
+                            <div class="card-body">
+                                <h1 class="card-title pricing-card-title">$29<small
+                                        class="text-body-secondary fw-light">/mo</small>
+                                </h1>
+                                <ul class="list-unstyled mt-3 mb-4">
+                                    <li>30 users included</li>
+                                    <li>15 GB of storage</li>
+                                    <li>Phone and email support</li>
+                                    <li>Help center access</li>
+                                </ul>
+                                <button type="button" class="w-100 btn btn-lg btn-primary">Solicitar Orçamento</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Tab 2 -->
-                <div class="tab-pane fade" id="multi" role="tabpanel" aria-labelledby="multi-tab">
-                    <h3>Multi-utilizador (opção)</h3>
-                    <p>Conteúdo para a aba Multi-utilizador (detalhes adicionais podem ser adicionados aqui).</p>
-                </div>
+                <h2 class="display-6 text-center mb-4">Comparação de planos</h2>
 
-                <!-- Tab 3 -->
-                <div class="tab-pane fade" id="folha" role="tabpanel" aria-labelledby="folha-tab">
-                    <h3>Folha de Obra (opção)</h3>
-                    <p>Conteúdo para a aba Folha de Obra (detalhes adicionais podem ser adicionados aqui).</p>
+                <div class="table-responsive">
+                    <table class="table text-center">
+                        <thead>
+                            <tr>
+                                <th style="width: 34%;"></th>
+                                <th style="width: 22%;">LA - Licença Anual</th>
+                                <th style="width: 22%;">LP - Licença Permanente</th>
+                                <th style="width: 22%;">Licença de Utilização</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row" class="text-start">Public</th>
+                                <td><i class="fa fa-check"></i> </td>
+                                <td><i class="fa fa-check"></i> </td>
+                                <td><i class="fa fa-check"></i> </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="text-start">Private</th>
+                                <td></td>
+                                <td><i class="fa fa-check"></i> </td>
+                                <td><i class="fa fa-check"></i> </td>
+                            </tr>
+                        </tbody>
+
+                        <tbody>
+                            <tr>
+                                <th scope="row" class="text-start">Permissions</th>
+                                <td><i class="fa fa-check"></i> </td>
+                                <td><i class="fa fa-check"></i> </td>
+                                <td><i class="fa fa-check"></i> </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="text-start">Sharing</th>
+                                <td></td>
+                                <td><i class="fa fa-check"></i> </td>
+                                <td><i class="fa fa-check"></i> </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="text-start">Unlimited members</th>
+                                <td></td>
+                                <td><i class="fa fa-check"></i> </td>
+                                <td><i class="fa fa-check"></i> </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="text-start">Extra security</th>
+                                <td></td>
+                                <td></td>
+                                <td><i class="fa fa-check"></i> </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-            </div>
+            </main>
         </div>
 
     </section>
 
     <section class="precos">
         <div class="container">
-            <h2 class="mb-4">Últimas atualizações - Acesso rápido</h2>
-            <div class="pricing3 ">
-                <div class="row">
-                    <div class="col-lg-2 col-md-3 align-self-center">
-                        <div class="nav flex-column nav-pills" role="tablist">
-                            <a class="nav-link" id="p3-1-tab" data-toggle="pill" href="#p3-1" role="tab"
-                                aria-controls="p3-1" aria-selected="false">
-                                <h5>Facturix Tesouraria</h5>
-                            </a>
-                            <a class="nav-link active" id="p3-2-tab" data-toggle="pill" href="#p3-2" role="tab"
-                                aria-controls="p3-2" aria-selected="false">
-                                <h5>Facturix Gestão Comercial</h5>
-                            </a>
-                            <a class="nav-link" id="p3-3-tab" data-toggle="pill" href="#p3-3" role="tab"
-                                aria-controls="p3-3" aria-selected="false">
-                                <h5>Facturix Restaurante</h5>
-                            </a>
-                            <a class="nav-link" id="p3-4-tab" data-toggle="pill" href="#p3-4" role="tab"
-                                aria-controls="p3-4" aria-selected="false">
-                                <h5>Facturix <br> Salarios</h5>
-                            </a>
+            <div class="title">
+                <h1 class="">Tabela de preços</h1>
+                <h5>Existem dois tipos de licenças. Ambas incluem um ano de suporte e de atualizações gratuitas.</h5>
+            </div>
+            <div class="pb-5 mb-sm-2">
+                <!-- Categories grid-->
+                <div class="row no-gutters">
+                    <!-- Category-->
+                    <div class="col-lg-3 col-sm-4 col-6 category-card">
+                        <div class="card border-0">
+                            <a class="d-grid justify-content-center mb-4" href="#"><img class="d-grid product-img"
+                                    src="ft.png" alt="Computers &amp; Accessories"></a>
+                            <div class="card-body text-center border border-collapse pb-2">
+                                <h2 class="h6 mb-2">Facturix Tesouraria</h2><span
+                                    class="d-block mb-3 font-size-xs text-muted">Starting from <span
+                                        class="font-weight-semibold">$149.80</span></span>
+                                <div class="list-group list-group-flush font-size-sm"><a
+                                        class="list-group-item list-group-item-action" href="#">utilidazadores
+                                        ilimitados</a><a class="list-group-item list-group-item-action"
+                                        href="#">Actualizações gratuitas</a><a
+                                        class="list-group-item list-group-item-action" href="#">Suporte Tecnico
+                                        remoto</a><a class="list-group-item list-group-item-action" href="#">Computer
+                                        Components</a><a class="list-group-item list-group-item-action"
+                                        href="#">Networking
+                                        Products</a></div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-lg-10 col-md-9">
-                        <div class="tab-content">
-                            <div class="tab-pane fade" id="p3-1" role="tabpanel" aria-labelledby="p3-1-tab">
-                                <div class="row">
-                                    <!-- Column  -->
-                                    <div class="col-lg-7">
-                                        <div class="pricing-box">
-                                            <h2 class="text-uppercase title mb-0">Facturix Gestão Comercial</h2>
-                                            <h6 class="subtitle">características</h6>
-                                            <ul class="list-inline">
-                                                <li>Gestão de Clientes e Fornecedores</li>
-                                                <li>Gestão de Utilizadores</li>
-                                                <li>Gestão de Stocks</li>
-                                                <li>Ajuste de Preços Automático</li>
-                                                <li>Movimentos entre Armazéns</li>
-                                                <li>Compatibilidade entre Produtos</li>
-                                                <li>Produto Composto</li>
-                                                <li>Lotes e Prazos de Validade nos Produtos</li>
-                                                <li>Controle de Inventário</li>
-                                                <li>Documentos de Faturação</li>
-                                                <li>Motivos de Isenção</li>
-                                                <li>Conversão de Documentos para PDF/Excel</li>
-                                                <li>Cópia de Linhas para Documentos</li>
-                                                <li>Mensagens de Rodapé nos Documentos</li>
-                                                <li>Recibos para Clientes</li>
-                                                <li>Controle Completo de Cobranças a Clientes</li>
-                                                <li>Compras a Fornecedores</li>
-                                                <li>Pagamentos a Fornecedores</li>
-                                                <li>Gestão de Comissões para Vendedores</li>
-                                                <li>Documento Teste Covid para Clínicas</li>
-                                            </ul>
-                                            <div class="d-flex align-items-center justify-content-between p-4">
-                                                <span
-                                                    class="display-5 text-dark mr-3 vm font-weight-medium">35.000,00MZN/Mes</span>
-                                                <button type="button" class="btn btn-primary">
-                                                    <img src="call.png" alt=""> Suporte</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Column  -->
-                                    <div class="col-lg-5 bg-image text-center align-items-end position-relative d-flex">
-                                        <div class="image-container">
-                                            <img src="ft.png" alt="Imagem">
-                                        </div>
-                                    </div>
-                                    <!-- Column  -->
-                                </div>
+                    <!-- Category-->
+                    <div class="col-lg-3 col-sm-4 col-6 category-card">
+                        <div class="card border-0">
+                            <a class="d-grid justify-content-center mb-4" href="#"><img class="d-grid product-img"
+                                    src="fg.png" alt="Computers &amp; Accessories"></a>
+                            <div class="card-body text-center border border-collapse pb-2">
+                                <h2 class="h6 mb-2">Facturix Gestão</h2><span
+                                    class="d-block mb-3 font-size-xs text-muted">Starting from <span
+                                        class="font-weight-semibold">$149.80</span></span>
+                                <div class="list-group list-group-flush font-size-sm"><a
+                                        class="list-group-item list-group-item-action" href="#">Laptops &amp;
+                                        Tablets</a><a class="list-group-item list-group-item-action" href="#">Desktop
+                                        Computers</a><a class="list-group-item list-group-item-action" href="#">Computer
+                                        Accessories</a><a class="list-group-item list-group-item-action"
+                                        href="#">Computer
+                                        Components</a><a class="list-group-item list-group-item-action"
+                                        href="#">Networking
+                                        Products</a></div>
                             </div>
-                            <div class="tab-pane fade  show active" id="p3-2" role="tabpanel"
-                                aria-labelledby="p3-2-tab">
-                                <div class="row">
-                                    <!-- Column  -->
-                                    <div class="col-lg-7">
-                                        <div class="pricing-box">
-                                            <h2 class="text-uppercase title mb-0">Facturix Gestão Comercial</h2>
-                                            <h6 class="subtitle">características</h6>
-                                            <ul class="list-inline">
-                                                <li>Gestão de Clientes e Fornecedores</li>
-                                                <li>Gestão de Utilizadores</li>
-                                                <li>Gestão de Stocks</li>
-                                                <li>Ajuste de Preços Automático</li>
-                                                <li>Movimentos entre Armazéns</li>
-                                                <li>Compatibilidade entre Produtos</li>
-                                                <li>Produto Composto</li>
-                                                <li>Lotes e Prazos de Validade nos Produtos</li>
-                                                <li>Controle de Inventário</li>
-                                                <li>Documentos de Faturação</li>
-                                                <li>Motivos de Isenção</li>
-                                                <li>Conversão de Documentos para PDF/Excel</li>
-                                                <li>Cópia de Linhas para Documentos</li>
-                                                <li>Mensagens de Rodapé nos Documentos</li>
-                                                <li>Recibos para Clientes</li>
-                                                <li>Controle Completo de Cobranças a Clientes</li>
-                                                <li>Compras a Fornecedores</li>
-                                                <li>Pagamentos a Fornecedores</li>
-                                                <li>Gestão de Comissões para Vendedores</li>
-                                                <li>Documento Teste Covid para Clínicas</li>
-                                            </ul>
-                                            <div class="d-flex align-items-center justify-content-between p-4">
-                                                <span
-                                                    class="display-5 text-dark mr-3 vm font-weight-medium">35.000,00MZN/Mes</span>
-                                                <button type="button" class="btn btn-primary">
-                                                    <img src="call.png" alt=""> Suporte</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Column  -->
-                                    <div class="col-lg-5 bg-image text-center align-items-end position-relative d-flex">
-                                        <div class="image-container">
-                                            <img src="fg.png" alt="Imagem">
-                                        </div>
-                                    </div>
-                                    <!-- Column  -->
-                                </div>
+                        </div>
+                    </div>
+                    <!-- Category-->
+                    <div class="col-lg-3 col-sm-4 col-6 category-card">
+                        <div class="card border-0">
+                            <a class="d-grid justify-content-center mb-4" href="#"><img class="d-grid product-img"
+                                    src="fr.png" alt="Computers &amp; Accessories"></a>
+                            <div class="card-body text-center border border-collapse pb-2">
+                                <h2 class="h6 mb-2">Facturix Restaurante</h2><span
+                                    class="d-block mb-3 font-size-xs text-muted">Starting from <span
+                                        class="font-weight-semibold">$149.80</span></span>
+                                <div class="list-group list-group-flush font-size-sm"><a
+                                        class="list-group-item list-group-item-action" href="#">Laptops &amp;
+                                        Tablets</a><a class="list-group-item list-group-item-action" href="#">Desktop
+                                        Computers</a><a class="list-group-item list-group-item-action" href="#">Computer
+                                        Accessories</a><a class="list-group-item list-group-item-action"
+                                        href="#">Computer
+                                        Components</a><a class="list-group-item list-group-item-action"
+                                        href="#">Networking
+                                        Products</a></div>
                             </div>
-                            <div class="tab-pane fade" id="p3-3" role="tabpanel" aria-labelledby="p3-3-tab">
-                                <div class="row">
-                                    <!-- Column  -->
-                                    <div class="col-lg-7">
-                                        <div class="pricing-box">
-                                            <h2 class="text-uppercase title mb-0">Facturix Gestão Comercial</h2>
-                                            <h6 class="subtitle">características</h6>
-                                            <ul class="list-inline">
-                                                <li>Gestão de Clientes e Fornecedores</li>
-                                                <li>Gestão de Utilizadores</li>
-                                                <li>Gestão de Stocks</li>
-                                                <li>Ajuste de Preços Automático</li>
-                                                <li>Movimentos entre Armazéns</li>
-                                                <li>Compatibilidade entre Produtos</li>
-                                                <li>Produto Composto</li>
-                                                <li>Lotes e Prazos de Validade nos Produtos</li>
-                                                <li>Controle de Inventário</li>
-                                                <li>Documentos de Faturação</li>
-                                                <li>Motivos de Isenção</li>
-                                                <li>Conversão de Documentos para PDF/Excel</li>
-                                                <li>Cópia de Linhas para Documentos</li>
-                                                <li>Mensagens de Rodapé nos Documentos</li>
-                                                <li>Recibos para Clientes</li>
-                                                <li>Controle Completo de Cobranças a Clientes</li>
-                                                <li>Compras a Fornecedores</li>
-                                                <li>Pagamentos a Fornecedores</li>
-                                                <li>Gestão de Comissões para Vendedores</li>
-                                                <li>Documento Teste Covid para Clínicas</li>
-                                            </ul>
-                                            <div class="d-flex align-items-center justify-content-between p-4">
-                                                <span
-                                                    class="display-5 text-dark mr-3 vm font-weight-medium">35.000,00MZN/Mes</span>
-                                                <button type="button" class="btn btn-primary">
-                                                    <img src="call.png" alt=""> Suporte</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Column  -->
-                                    <div class="col-lg-5 bg-image text-center align-items-end position-relative d-flex">
-                                        <div class="image-container">
-                                            <img src="fr.png" alt="Imagem">
-                                        </div>
-                                    </div>
-                                    <!-- Column  -->
-                                </div>
-                            </div>
-                            <div class="tab-pane fade" id="p3-4" role="tabpanel" aria-labelledby="p3-4-tab">
-                                <div class="row">
-                                    <!-- Column  -->
-                                    <div class="col-lg-7">
-                                        <div class="pricing-box">
-                                            <h2 class="text-uppercase title mb-0">Facturix Gestão Comercial</h2>
-                                            <h6 class="subtitle">características</h6>
-                                            <ul class="list-inline">
-                                                <li>Gestão de Clientes e Fornecedores</li>
-                                                <li>Gestão de Utilizadores</li>
-                                                <li>Gestão de Stocks</li>
-                                                <li>Ajuste de Preços Automático</li>
-                                                <li>Movimentos entre Armazéns</li>
-                                                <li>Compatibilidade entre Produtos</li>
-                                                <li>Produto Composto</li>
-                                                <li>Lotes e Prazos de Validade nos Produtos</li>
-                                                <li>Controle de Inventário</li>
-                                                <li>Documentos de Faturação</li>
-                                                <li>Motivos de Isenção</li>
-                                                <li>Conversão de Documentos para PDF/Excel</li>
-                                                <li>Cópia de Linhas para Documentos</li>
-                                                <li>Mensagens de Rodapé nos Documentos</li>
-                                                <li>Recibos para Clientes</li>
-                                                <li>Controle Completo de Cobranças a Clientes</li>
-                                                <li>Compras a Fornecedores</li>
-                                                <li>Pagamentos a Fornecedores</li>
-                                                <li>Gestão de Comissões para Vendedores</li>
-                                                <li>Documento Teste Covid para Clínicas</li>
-                                            </ul>
-                                            <div class="d-flex align-items-center justify-content-between p-4">
-                                                <span
-                                                    class="display-5 text-dark mr-3 vm font-weight-medium">35.000,00MZN/Mes</span>
-                                                <button type="button" class="btn btn-primary">
-                                                    <img src="call.png" alt=""> Suporte</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Column  -->
-                                    <div class="col-lg-5 bg-image text-center align-items-end position-relative d-flex">
-                                        <div class="image-container">
-                                            <img src="fs.png" alt="Imagem">
-                                        </div>
-                                    </div>
-                                    <!-- Column  -->
-                                </div>
+                        </div>
+                    </div>
+                    <!-- Category-->
+                    <div class="col-lg-3 col-sm-4 col-6 category-card">
+                        <div class="card border-0">
+                            <a class="d-grid justify-content-center mb-4" href="#"><img class="d-grid product-img"
+                                    src="fs.png" alt="Computers &amp; Accessories"></a>
+                            <div class="card-body text-center border border-collapse pb-2">
+                                <h2 class="h6 mb-2">Facturix Salario</h2><span
+                                    class="d-block mb-3 font-size-xs text-muted">Starting from <span
+                                        class="font-weight-semibold">$149.80</span></span>
+                                <div class="list-group list-group-flush font-size-sm"><a
+                                        class="list-group-item list-group-item-action" href="#">Laptops &amp;
+                                        Tablets</a><a class="list-group-item list-group-item-action" href="#">Desktop
+                                        Computers</a><a class="list-group-item list-group-item-action" href="#">Computer
+                                        Accessories</a><a class="list-group-item list-group-item-action"
+                                        href="#">Computer
+                                        Components</a><a class="list-group-item list-group-item-action"
+                                        href="#">Networking
+                                        Products</a></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-dark footer">
+    <footer class="footer">
         <div class="footer-top py-8">
             <div class="container">
                 <div class="row gy-5">
@@ -721,6 +850,22 @@
         </div>
     </footer>
     <!-- FIM DO FOOTER -->
+
+
+    <script>
+        // JavaScript para adicionar a classe "scrolled"
+        window.addEventListener("scroll", function () {
+            const navbar = document.getElementById("navbare");
+
+            // Adiciona a classe 'scrolled' se o usuário rolar mais de 50px
+            if (window.scrollY > 50) {
+                navbar.classList.add("scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
+            }
+        });
+
+    </script>
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
