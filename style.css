@@ -5,7 +5,7 @@
         }
 
         :root {
-            --primary-color: rgb(55, 125, 159) !important;
+            --primary-color: #001F3F !important;
             --secondary-color: #004c70;
             --background-color: rgb(66 82 250);
             --text-color: #000000;
@@ -15,20 +15,29 @@
             --white-color: #fff;
         }
 
+        .table-dark {
+            --bs-table-bg: #001F3F !important;
+            border-color: #001F3F !important;
+        }
+
         .mr {
             margin-right: 5px;
         }
 
+        ul {
+            font-size: 1rem;
+        }
+
         .nav-link:hover {
-            color: #377d9f !important;
+            color: #001F3F !important;
         }
 
         .nav-link.active {
-            color: #377d9f !important;
+            color: #001F3F !important;
         }
 
         p {
-            font-size: 10px;
+            font-size: 12px;
         }
 
         .hero {
@@ -43,7 +52,7 @@
 
         .nav-link {
             color: rgb(0, 0, 0) !important;
-            font-size: 10px;
+            font-size: 1rem;
             font-weight: 600;
         }
 
@@ -144,7 +153,7 @@
         }
 
         nav .btn {
-            background-color: #377d9f;
+            background-color: #001F3F;
             color: white;
         }
 
@@ -178,7 +187,7 @@
         .text-end button {
             align-items: center;
             display: flex;
-            background-color: #377d9f;
+            background-color: #001F3F;
             color: white;
         }
 
@@ -326,6 +335,7 @@
             background-color: var(--primary-color);
             color: white;
             border: none;
+            font-size: 12px;
         }
 
         .card .btn:hover {
@@ -342,7 +352,10 @@
             color: #004c70;
         }
 
-
+        .list-unstyled ul li {
+            font-size: 12px;
+            padding: 2px;
+        }
 
 
         .actualizacoes {
@@ -447,7 +460,7 @@
             border-left: 1px solid #15395a;
             border-right: 1px solid #15395a;
             border-bottom: 1px solid #15395a;
-            font-size: 10px;
+            font-size: 12px;
         }
 
         @media screen and (max-width: 767px) {
