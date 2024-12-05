@@ -1,7 +1,7 @@
         body {
             background: #004c70;
             color: white;
-            font-size: 10px;
+            font-size: 14px;
         }
 
         :root {
@@ -24,9 +24,6 @@
             margin-right: 5px;
         }
 
-        ul {
-            font-size: 1rem;
-        }
 
         .nav-link:hover {
             color: #001F3F !important;
@@ -37,7 +34,7 @@
         }
 
         p {
-            font-size: 12px;
+            font-size: 14px;
         }
 
         .hero {
@@ -52,7 +49,6 @@
 
         .nav-link {
             color: rgb(0, 0, 0) !important;
-            font-size: 1rem;
             font-weight: 600;
         }
 
@@ -102,7 +98,7 @@
         }
 
         .list-inline li {
-            font-size: 12px;
+            font-size: 14px;
         }
 
 
@@ -169,6 +165,44 @@
             width: 1140px !important
         }
 
+        .container {
+            width: 100% !important;
+            margin: 0 auto;
+            /* Centraliza a container */
+        }
+
+        /* Ajuste para telas menores */
+        @media (max-width: 1200px) {
+            .container {
+                width: 100%;
+                /* Usa 100% da largura da tela */
+                padding: 0 15px;
+                /* Adiciona um pouco de espaçamento nas laterais */
+            }
+        }
+
+        @media (max-width: 992px) {
+            .container {
+                width: 100%;
+                /* Continua ocupando 100% da largura */
+                padding: 0 15px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 100%;
+                padding: 0 15px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .container {
+                width: 100%;
+                padding: 0 15px;
+            }
+        }
+
         .btn img {
             font-size: 1.5626em;
             height: 1em;
@@ -189,6 +223,10 @@
             display: flex;
             background-color: #001F3F;
             color: white;
+        }
+
+        button {
+            font-size: 16px !important;
         }
 
         .heading-title {
@@ -215,7 +253,7 @@
             text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
             margin: 24px 0 0 6px;
             text-align: left;
-            font-size: 12px;
+            font-size: 14px;
         }
 
         .hero-img {
@@ -335,7 +373,7 @@
             background-color: var(--primary-color);
             color: white;
             border: none;
-            font-size: 12px;
+            font-size: 14px;
         }
 
         .card .btn:hover {
@@ -353,7 +391,6 @@
         }
 
         .list-unstyled ul li {
-            font-size: 12px;
             padding: 2px;
         }
 
@@ -464,7 +501,7 @@
             border-left: 1px solid #15395a;
             border-right: 1px solid #15395a;
             border-bottom: 1px solid #15395a;
-            font-size: 12px;
+            font-size: 14px;
         }
 
         @media screen and (max-width: 767px) {
