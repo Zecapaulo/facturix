@@ -228,16 +228,7 @@
            display: contents;
        }
 
-       .text-end button {
-           align-items: center;
-           display: flex;
-           background-color: #001F3F;
-           color: white;
-       }
 
-       button {
-           font-size: 16px !important;
-       }
 
        .heading-title {
            color: #ffffff !important;
@@ -272,7 +263,7 @@
            flex-direction: column;
            position: relative;
            flex: 1;
-           max-width: 100%;
+           max-width: 36%;
            transition-duration: inherit;
        }
 
@@ -287,6 +278,63 @@
            border: none;
            font-size: 10px;
            font-weight: 600;
+       }
+
+       .btn-primary:hover {
+           background-color: transparent;
+           border: 1px solid #fff;
+           color: #fff;
+       }
+
+       .text-end button {
+           align-items: center;
+           display: flex;
+           background-color: #001F3F;
+           color: white;
+       }
+
+       .text-end button:hover {
+           border: 1px solid var(--text-color);
+           background-color: transparent;
+           color: var(--text-color);
+       }
+
+       .nav-tabs button.nav-link.active {
+           color: #f2f2f2 !important;
+           background-color: #001f3f !important;
+           border: none;
+           font-size: 15px;
+           background-image: none;
+           padding: 10px 15px;
+       }
+
+       .buttons li button {
+           align-items: center !important;
+           background-color: #DADCDC !important;
+           color: white !important;
+           padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x) !important;
+       }
+
+       .buttons li button:hover {
+           border: 1px solid var(--text-color) !important;
+           background-color: transparent !important;
+           color: var(--text-color) !important;
+           padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x) !important;
+       }
+
+       .buttons li button.active {
+           border: 1px solid var(--text-color) !important;
+           background-color: transparent !important;
+           color: var(--text-color) !important;
+           padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x) !important;
+       }
+
+       .buttons li {
+           padding-right: 10px;
+       }
+
+       button {
+           font-size: 16px !important;
        }
 
        .btn-custom {
@@ -312,6 +360,10 @@
        .tabs {
            background-color: transparent;
            border-radius: 5px;
+       }
+
+       .nav-tabs {
+           border: none;
        }
 
        .nav-tabs .nav-link {

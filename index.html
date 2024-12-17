@@ -12,6 +12,13 @@
 
     <link rel="stylesheet" href="style.css">
     <style>
+        .tab-content>.active {
+            display: flex;
+            align-content: space-between;
+            position: initial;
+            align-items: center;
+        }
+
         #myBtn {
             display: none;
             position: fixed;
@@ -95,19 +102,19 @@
                 <div class="col-md-6">
                     <h1 class="heading-title display-4 fw-bold">Facturix Software</h1>
                     <p class="lead-p">
-                        Facturix é uma poderosa solução de software desenvolvida para atender às necessidades
+                        Facturix é uma solução de software desenvolvida para atender às necessidades
                         específicas de empresas em
                         diferentes setores. <br> Cada módulo do Facturix foi projetado para um propósito
                         específico, garantindo alta eficiência e personalização. <br><br>
                     <ul>
                         <li><strong>Facturix Gestão Comercial:</strong> Administra vendas, stock e otimiza processos
-                            comerciais.</li>
+                            comerciais;</li>
                         <li><strong>Facturix 3.0 Gestão Comercial:</strong> Administra vendas, stock e otimiza
                             processos
-                            comerciais.</li>
+                            comerciai;</li>
                         <li><strong>Facturix Restaurante:</strong> Gerencia pedidos, stock, pagamentos e relatórios
-                            financeiros.</li>
-                        <li><strong>Facturix Salários:</strong> Automatiza a folha de pagamento, impostos e benefícios.
+                            financeiros;</li>
+                        <li><strong>Facturix Salários:</strong> Automatiza a folha de pagamento, impostos e benefícios;
                         </li>
                         <li><strong>Facturix Tesouraria:</strong> Controla fluxos de caixa, contas a pagar/receber e
                             relatórios.</li>
@@ -152,7 +159,7 @@
                         data-bs-target="#salario" type="button" role="tab" aria-controls="salario"
                         aria-selected="false">
                         <button class="nav-link">
-                            Facturix Salario
+                            Facturix Salários
                         </button>
                     </li>
                 </nav>
@@ -162,11 +169,12 @@
             <div class="tab-content" id="productTabsContent">
                 <!-- Tab 1 -->
                 <div class="tab-pane fade show active" id="gestao" role="tabpanel" aria-labelledby="gestao-tab">
-                    <h3><b>Facturix</b> Gestão Comercial</h3>
+
                     <div class="row">
                         <!-- Column  -->
                         <div class="col-lg-7">
                             <div class="pricing-box">
+                                <h3><b>Facturix</b> Gestão Comercial</h3>
                                 <h4 class="subtitle">características</h4>
                                 <ul class="list-inline">
                                     <li>Gestão de Clientes e Fornecedores</li>
@@ -215,11 +223,11 @@
 
                 <!-- Tab 2 -->
                 <div class="tab-pane fade" id="multi" role="tabpanel" aria-labelledby="multi-tab">
-                    <h3><b>Facturix</b> Tesouraria</h3>
                     <div class="row">
                         <!-- Column  -->
                         <div class="col-lg-7">
                             <div class="pricing-box">
+                                <h3><b>Facturix</b> Tesouraria</h3>
                                 <h4 class="subtitle">características</h4>
                                 <ul class="list-inline">
                                     <li>Gestão de Clientes e Fornecedores</li>
@@ -268,11 +276,11 @@
 
                 <!-- Tab 3 -->
                 <div class="tab-pane fade" id="folha" role="tabpanel" aria-labelledby="folha-tab">
-                    <h3><b>Facturix</b> Restaurante</h3>
                     <div class="row">
                         <!-- Column  -->
                         <div class="col-lg-7">
                             <div class="pricing-box">
+                                <h3><b>Facturix</b> Restaurante</h3>
                                 <h4 class="subtitle">características</h4>
                                 <ul class="list-inline">
                                     <li>Controle de pedidos nas mesas e controle de pedidos para delivery.</li>
@@ -318,14 +326,14 @@
                         <a href="#">tabela com as características e diferenças entre o AstorGes e o AstorLite</a>.
                     </p>
                 </div>
-
                 <!-- Tab 4 -->
                 <div class="tab-pane fade" id="salario" role="tabpanel" aria-labelledby="salario-tab">
-                    <h3><b>Facturix</b> Salario</h3>
                     <div class="row">
                         <!-- Column  -->
                         <div class="col-lg-7">
                             <div class="pricing-box">
+                                <h3><b>Facturix</b> Salários</h3>
+
                                 <h4 class="subtitle">características</h4>
                                 <ul class="list-inline">
                                     <li>Cadastrar seguros, departamentos, profissões, folgas e feriados.</li>
@@ -499,7 +507,7 @@
             </div>
             <!-- Tabs -->
             <main>
-                <div class="row row-cols-1 row-cols-md-3 mb-3">
+                <!-- <div class="row row-cols-1 row-cols-md-3 mb-3">
                     <div class="col">
                         <div class="card mb-4 h-100 rounded-3 shadow-sm">
                             <div class="card-header text-bg-primary">
@@ -592,10 +600,10 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class=" py-3">
+                </div> -->
+                <!-- <div class=" py-3">
                     <h4 class="my-0 fw-normal">Comparação de Planos</h4>
-                </div>
+                </div> -->
 
                 <div class="table-responsive">
                     <table class="table table-bordered ">
@@ -667,31 +675,52 @@
 
     <section class="precos">
         <div class="container">
-            <div class="title">
-                <h1 class="">Tabela de preços</h1>
-                <h5>Existem dois tipos de licenças. Ambas incluem um ano de suporte e de atualizações gratuitas.</h5>
+            <div class="header-text d-flex justify-content-between">
+                <div class="title">
+                    <h1 class="">Tabela de preços</h1>
+                    <!-- <h5>Existem dois tipos de licenças. Ambas incluem um ano de suporte e de atualizações gratuitas. -->
+                    </h5>
+                </div>
+                <ul class="nav nav-tabs buttons" id="priceTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="la-tab" data-bs-toggle="tab" data-bs-target="#la"
+                            type="button" role="tab" aria-controls="la" aria-selected="true">LA - Licença Anual</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="lp-tab" data-bs-toggle="tab" data-bs-target="#lp" type="button"
+                            role="tab" aria-controls="lp" aria-selected="false">LP - Licença Permanente</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="lu-tab" data-bs-toggle="tab" data-bs-target="#lu" type="button"
+                            role="tab" aria-controls="lu" aria-selected="false">LU - Licença de Utilização</button>
+                    </li>
+                </ul>
             </div>
-            <div class="pb-5 mb-sm-2">
+            <div class="tab-content pt-4" id="priceTabContent">
                 <!-- Categories grid-->
-                <div class="row no-gutters">
+                <!-- Licenca anual -->
+                <div class="row no-gutters tab-pane fade show active" id="la" role="tabpanel" aria-labelledby="la-tab">
                     <!-- Category-->
                     <div class="col-lg-3 col-sm-4 col-6 category-card">
                         <div class="card border-0">
                             <a class="d-grid justify-content-center mb-4" href="#"><img class="d-grid product-img"
                                     src="ft.png" alt="Computers &amp; Accessories"></a>
                             <div class="card-body text-center border border-collapse pb-2">
-                                <h2 class="h6 mb-2">Facturix Tesouraria</h2><span
-                                    class="d-block mb-3 font-size-xs text-muted">Starting from <span
-                                        class="font-weight-semibold">$149.80</span></span>
-                                <div class="list-group list-group-flush font-size-sm"><a
-                                        class="list-group-item list-group-item-action" href="#">utilidazadores
-                                        ilimitados</a><a class="list-group-item list-group-item-action"
-                                        href="#">Actualizações gratuitas</a><a
-                                        class="list-group-item list-group-item-action" href="#">Suporte Tecnico
-                                        remoto</a><a class="list-group-item list-group-item-action" href="#">Computer
-                                        Components</a><a class="list-group-item list-group-item-action"
-                                        href="#">Networking
-                                        Products</a></div>
+                                <h2 class="h6 mb-2">Facturix Tesouraria</h2>
+                                <span class="d-block mb-3 font-size-xs text-muted">A partir de <span
+                                        class="font-weight-semibold">149.80MZN</span></span>
+                                <div class="list-group list-group-flush font-size-sm">
+                                    <a class="list-group-item list-group-item-action" href="#">Utilizadores
+                                        ilimitados</a>
+                                    <a class="list-group-item list-group-item-action" href="#">Atualizações
+                                        gratuitas</a>
+                                    <a class="list-group-item list-group-item-action" href="#">Suporte técnico
+                                        remoto</a>
+                                    <a class="list-group-item list-group-item-action" href="#">Relatórios financeiros
+                                        detalhados</a>
+                                    <a class="list-group-item list-group-item-action" href="#">Compatível com múltiplos
+                                        dispositivos</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -701,18 +730,122 @@
                             <a class="d-grid justify-content-center mb-4" href="#"><img class="d-grid product-img"
                                     src="fg.png" alt="Computers &amp; Accessories"></a>
                             <div class="card-body text-center border border-collapse pb-2">
-                                <h2 class="h6 mb-2">Facturix Gestão</h2><span
-                                    class="d-block mb-3 font-size-xs text-muted">Starting from <span
-                                        class="font-weight-semibold">$149.80</span></span>
-                                <div class="list-group list-group-flush font-size-sm"><a
-                                        class="list-group-item list-group-item-action" href="#">Laptops &amp;
-                                        Tablets</a><a class="list-group-item list-group-item-action" href="#">Desktop
-                                        Computers</a><a class="list-group-item list-group-item-action" href="#">Computer
-                                        Accessories</a><a class="list-group-item list-group-item-action"
-                                        href="#">Computer
-                                        Components</a><a class="list-group-item list-group-item-action"
-                                        href="#">Networking
-                                        Products</a></div>
+                                <h2 class="h6 mb-2">Facturix Gestão</h2>
+                                <span class="d-block mb-3 font-size-xs text-muted">A partir de <span
+                                        class="font-weight-semibold">349.80MZN</span></span>
+                                <div class="list-group list-group-flush font-size-sm">
+                                    <a class="list-group-item list-group-item-action" href="#">Gestão integrada de
+                                        inventário</a>
+                                    <a class="list-group-item list-group-item-action" href="#">Monitoramento de vendas
+                                    </a>
+                                    <a class="list-group-item list-group-item-action" href="#">Relatórios analíticos em
+                                        tempo real</a>
+                                    <a class="list-group-item list-group-item-action" href="#">Controle de fluxo de
+                                        caixa</a>
+                                    <a class="list-group-item list-group-item-action" href="#">Compatível</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- Category-->
+                    <div class="col-lg-3 col-sm-4 col-6 category-card">
+                        <div class="card border-0">
+                            <a class="d-grid justify-content-center mb-4" href="#"><img class="d-grid product-img"
+                                    src="fr.png" alt="Computers &amp; Accessories"></a>
+                            <div class="card-body text-center border border-collapse pb-2">
+                                <h2 class="h6 mb-2">Facturix Restaurante</h2>
+                                <span class="d-block mb-3 font-size-xs text-muted">A partir de <span
+                                        class="font-weight-semibold">154.80MZN</span></span>
+                                <div class="list-group list-group-flush font-size-sm">
+                                    <a class="list-group-item list-group-item-action" href="#">Gestão de cardápio
+                                        digital</a>
+                                    <a class="list-group-item list-group-item-action" href="#">Controle de pedidos e
+                                        mesas</a>
+                                    <a class="list-group-item list-group-item-action" href="#">Gestão de estoque
+                                        integrada</a>
+                                    <a class="list-group-item list-group-item-action" href="#">Relatórios financeiros
+                                        detalhados</a>
+                                    <a class="list-group-item list-group-item-action" href="#">Suporte para múltiplas
+                                        localizações</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- Category-->
+                    <div class="col-lg-3 col-sm-4 col-6 category-card">
+                        <div class="card border-0">
+                            <a class="d-grid justify-content-center mb-4" href="#"><img class="d-grid product-img"
+                                    src="fs.png" alt="Computers &amp; Accessories"></a>
+                            <div class="card-body text-center border border-collapse pb-2">
+                                <h2 class="h6 mb-2">Facturix Salários</h2>
+                                <span class="d-block mb-3 font-size-xs text-muted">A partir de <span
+                                        class="font-weight-semibold">3149.80MZN</span></span>
+                                <div class="list-group list-group-flush font-size-sm">
+                                    <a class="list-group-item list-group-item-action" href="#">Processamento automático
+                                        de salários</a>
+                                    <a class="list-group-item list-group-item-action" href="#">Gestão de impostos e
+                                        contribuições</a>
+                                    <a class="list-group-item list-group-item-action" href="#">Emissão de recibos
+                                        detalhados</a>
+                                    <a class="list-group-item list-group-item-action" href="#">Relatórios de compliance
+                                        legais</a>
+                                    <a class="list-group-item list-group-item-action" href="#">Suporte para múltiplos
+                                        funcionários</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Licenca permanente -->
+                <div class="tab-pane fade row no-gutters" id="lp" role="tabpanel" aria-labelledby="lp-tab">
+                    <!-- Category-->
+                    <div class="col-lg-3 col-sm-4 col-6 category-card">
+                        <div class="card border-0">
+                            <a class="d-grid justify-content-center mb-4" href="#"><img class="d-grid product-img"
+                                    src="ft.png" alt="Computers &amp; Accessories"></a>
+                            <div class="card-body text-center border border-collapse pb-2">
+                                <h2 class="h6 mb-2">Facturix Tesouraria</h2>
+                                <span class="d-block mb-3 font-size-xs text-muted">A partir de <span
+                                        class="font-weight-semibold">149.80MZN</span></span>
+                                <div class="list-group list-group-flush font-size-sm">
+                                    <a class="list-group-item list-group-item-action" href="#">Utilizadores
+                                        ilimitados</a>
+                                    <a class="list-group-item list-group-item-action" href="#">Atualizações
+                                        gratuitas</a>
+                                    <a class="list-group-item list-group-item-action" href="#">Suporte técnico
+                                        remoto</a>
+                                    <a class="list-group-item list-group-item-action" href="#">Relatórios financeiros
+                                        detalhados</a>
+                                    <a class="list-group-item list-group-item-action" href="#">Compatível com múltiplos
+                                        dispositivos</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Category-->
+                    <div class="col-lg-3 col-sm-4 col-6 category-card">
+                        <div class="card border-0">
+                            <a class="d-grid justify-content-center mb-4" href="#"><img class="d-grid product-img"
+                                    src="fg.png" alt="Computers &amp; Accessories"></a>
+                            <div class="card-body text-center border border-collapse pb-2">
+                                <h2 class="h6 mb-2">Facturix Gestão</h2>
+                                <span class="d-block mb-3 font-size-xs text-muted">A partir de <span
+                                        class="font-weight-semibold">349.80MZN</span></span>
+                                <div class="list-group list-group-flush font-size-sm">
+                                    <a class="list-group-item list-group-item-action" href="#">Gestão integrada de
+                                        inventário</a>
+                                    <a class="list-group-item list-group-item-action" href="#">Monitoramento de vendas e
+                                        faturamento</a>
+                                    <a class="list-group-item list-group-item-action" href="#">Relatórios analíticos em
+                                        tempo real</a>
+                                    <a class="list-group-item list-group-item-action" href="#">Controle de fluxo de
+                                        caixa</a>
+                                    <a class="list-group-item list-group-item-action" href="#">Compatível com sistemas
+                                        multiplataforma</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -722,18 +855,21 @@
                             <a class="d-grid justify-content-center mb-4" href="#"><img class="d-grid product-img"
                                     src="fr.png" alt="Computers &amp; Accessories"></a>
                             <div class="card-body text-center border border-collapse pb-2">
-                                <h2 class="h6 mb-2">Facturix Restaurante</h2><span
-                                    class="d-block mb-3 font-size-xs text-muted">Starting from <span
-                                        class="font-weight-semibold">$149.80</span></span>
-                                <div class="list-group list-group-flush font-size-sm"><a
-                                        class="list-group-item list-group-item-action" href="#">Laptops &amp;
-                                        Tablets</a><a class="list-group-item list-group-item-action" href="#">Desktop
-                                        Computers</a><a class="list-group-item list-group-item-action" href="#">Computer
-                                        Accessories</a><a class="list-group-item list-group-item-action"
-                                        href="#">Computer
-                                        Components</a><a class="list-group-item list-group-item-action"
-                                        href="#">Networking
-                                        Products</a></div>
+                                <h2 class="h6 mb-2">Facturix Restaurante</h2>
+                                <span class="d-block mb-3 font-size-xs text-muted">A partir de <span
+                                        class="font-weight-semibold">154.80MZN</span></span>
+                                <div class="list-group list-group-flush font-size-sm">
+                                    <a class="list-group-item list-group-item-action" href="#">Gestão de cardápio
+                                        digital</a>
+                                    <a class="list-group-item list-group-item-action" href="#">Controle de pedidos e
+                                        mesas</a>
+                                    <a class="list-group-item list-group-item-action" href="#">Gestão de estoque
+                                        integrada</a>
+                                    <a class="list-group-item list-group-item-action" href="#">Relatórios financeiros
+                                        detalhados</a>
+                                    <a class="list-group-item list-group-item-action" href="#">Suporte para múltiplas
+                                        localizações</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -743,19 +879,125 @@
                             <a class="d-grid justify-content-center mb-4" href="#"><img class="d-grid product-img"
                                     src="fs.png" alt="Computers &amp; Accessories"></a>
                             <div class="card-body text-center border border-collapse pb-2">
-                                <h2 class="h6 mb-2">Facturix Salario</h2><span
-                                    class="d-block mb-3 font-size-xs text-muted">Starting from <span
-                                        class="font-weight-semibold">$149.80</span></span>
-                                <div class="list-group list-group-flush font-size-sm"><a
-                                        class="list-group-item list-group-item-action" href="#">Laptops &amp;
-                                        Tablets</a><a class="list-group-item list-group-item-action" href="#">Desktop
-                                        Computers</a><a class="list-group-item list-group-item-action" href="#">Computer
-                                        Accessories</a><a class="list-group-item list-group-item-action"
-                                        href="#">Computer
-                                        Components</a><a class="list-group-item list-group-item-action"
-                                        href="#">Networking
-                                        Products</a></div>
+                                <h2 class="h6 mb-2">Facturix Salários</h2>
+                                <span class="d-block mb-3 font-size-xs text-muted">A partir de <span
+                                        class="font-weight-semibold">3149.80MZN</span></span>
+                                <div class="list-group list-group-flush font-size-sm">
+                                    <a class="list-group-item list-group-item-action" href="#">Processamento automático
+                                        de salários</a>
+                                    <a class="list-group-item list-group-item-action" href="#">Gestão de impostos e
+                                        contribuições</a>
+                                    <a class="list-group-item list-group-item-action" href="#">Emissão de recibos
+                                        detalhados</a>
+                                    <a class="list-group-item list-group-item-action" href="#">Relatórios de compliance
+                                        legais</a>
+                                    <a class="list-group-item list-group-item-action" href="#">Suporte para múltiplos
+                                        funcionários</a>
+                                </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Licenca utilizacao -->
+                <div class="tab-pane fade row no-gutters" id="lu" role="tabpanel" aria-labelledby="lu-tab">
+                    <!-- Category-->
+                    <div class="col-lg-3 col-sm-4 col-6 category-card">
+                        <div class="card border-0">
+                            <a class="d-grid justify-content-center mb-4" href="#"><img class="d-grid product-img"
+                                    src="ft.png" alt="Computers &amp; Accessories"></a>
+                            <div class="card-body text-center border border-collapse pb-2">
+                                <h2 class="h6 mb-2">Facturix Tesouraria</h2>
+                                <span class="d-block mb-3 font-size-xs text-muted">A partir de <span
+                                        class="font-weight-semibold">149.80MZN</span></span>
+                                <div class="list-group list-group-flush font-size-sm">
+                                    <a class="list-group-item list-group-item-action" href="#">Utilizadores
+                                        ilimitados</a>
+                                    <a class="list-group-item list-group-item-action" href="#">Atualizações
+                                        gratuitas</a>
+                                    <a class="list-group-item list-group-item-action" href="#">Suporte técnico
+                                        remoto</a>
+                                    <a class="list-group-item list-group-item-action" href="#">Relatórios financeiros
+                                        detalhados</a>
+                                    <a class="list-group-item list-group-item-action" href="#">Compatível com múltiplos
+                                        dispositivos</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- Category-->
+                    <div class="col-lg-3 col-sm-4 col-6 category-card">
+                        <div class="card border-0">
+                            <a class="d-grid justify-content-center mb-4" href="#"><img class="d-grid product-img"
+                                    src="fg.png" alt="Computers &amp; Accessories"></a>
+                            <div class="card-body text-center border border-collapse pb-2">
+                                <h2 class="h6 mb-2">Facturix Gestão</h2>
+                                <span class="d-block mb-3 font-size-xs text-muted">A partir de <span
+                                        class="font-weight-semibold">349.80MZN</span></span>
+                                <div class="list-group list-group-flush font-size-sm">
+                                    <a class="list-group-item list-group-item-action" href="#">Gestão integrada de
+                                        inventário</a>
+                                    <a class="list-group-item list-group-item-action" href="#">Monitoramento de vendas e
+                                        faturamento</a>
+                                    <a class="list-group-item list-group-item-action" href="#">Relatórios analíticos em
+                                        tempo real</a>
+                                    <a class="list-group-item list-group-item-action" href="#">Controle de fluxo de
+                                        caixa</a>
+                                    <a class="list-group-item list-group-item-action" href="#">Compatível com sistemas
+                                        multiplataforma</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Category-->
+                    <div class="col-lg-3 col-sm-4 col-6 category-card">
+                        <div class="card border-0">
+                            <a class="d-grid justify-content-center mb-4" href="#"><img class="d-grid product-img"
+                                    src="fr.png" alt="Computers &amp; Accessories"></a>
+                            <div class="card-body text-center border border-collapse pb-2">
+                                <h2 class="h6 mb-2">Facturix Restaurante</h2>
+                                <span class="d-block mb-3 font-size-xs text-muted">A partir de <span
+                                        class="font-weight-semibold">154.80MZN</span></span>
+                                <div class="list-group list-group-flush font-size-sm">
+                                    <a class="list-group-item list-group-item-action" href="#">Gestão de cardápio
+                                        digital</a>
+                                    <a class="list-group-item list-group-item-action" href="#">Controle de pedidos e
+                                        mesas</a>
+                                    <a class="list-group-item list-group-item-action" href="#">Gestão de estoque
+                                        integrada</a>
+                                    <a class="list-group-item list-group-item-action" href="#">Relatórios financeiros
+                                        detalhados</a>
+                                    <a class="list-group-item list-group-item-action" href="#">Suporte para múltiplas
+                                        localizações</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Category-->
+                    <div class="col-lg-3 col-sm-4 col-6 category-card">
+                        <div class="card border-0">
+                            <a class="d-grid justify-content-center mb-4" href="#"><img class="d-grid product-img"
+                                    src="fs.png" alt="Computers &amp; Accessories"></a>
+                            <div class="card-body text-center border border-collapse pb-2">
+                                <h2 class="h6 mb-2">Facturix Salários</h2>
+                                <span class="d-block mb-3 font-size-xs text-muted">A partir de <span
+                                        class="font-weight-semibold">3149.80MZN</span></span>
+                                <div class="list-group list-group-flush font-size-sm">
+                                    <a class="list-group-item list-group-item-action" href="#">Processamento automático
+                                        de salários</a>
+                                    <a class="list-group-item list-group-item-action" href="#">Gestão de impostos e
+                                        contribuições</a>
+                                    <a class="list-group-item list-group-item-action" href="#">Emissão de recibos
+                                        detalhados</a>
+                                    <a class="list-group-item list-group-item-action" href="#">Relatórios de compliance
+                                        legais</a>
+                                    <a class="list-group-item list-group-item-action" href="#">Suporte para múltiplos
+                                        funcionários</a>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
