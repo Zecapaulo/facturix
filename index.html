@@ -9,6 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
     <link rel="stylesheet" href="style.css">
     <style>
@@ -102,34 +103,35 @@
             text-align: center;
         }
 
-        .wrapper {
-            /*This part is important for centering*/
-            display: grid;
-            place-items: center;
-            margin-bottom: 40px;
-        }
 
-        .typing-demo {
-            width: 27ch;
-            animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+        .wrapper {
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             white-space: nowrap;
             overflow: hidden;
-            border-right: 3px solid;
+            font-family: monospace;
+            font-size: 16px;
+            color: #252525;
+            margin-bottom: 14px;
+        }
+
+        .wrapper h1 {
+            white-space: nowrap;
+            overflow: hidden;
             font-family: monospace;
             font-size: 1.5em;
             color: #252525;
         }
 
-        @keyframes typing {
-            from {
-                width: 0
-            }
-        }
-
-        @keyframes blink {
-            50% {
-                border-color: transparent
-            }
+        .wrapper span {
+            background: linear-gradient(89.92deg, #001f3f 50.34%, #e75484 80.07%, #001f3f 99.89%);
+            background-clip: border-box;
+            background-clip: border-box;
+            background-clip: border-box;
+            -webkit-background-clip: text;
+            color: transparent;
         }
 
 
@@ -328,6 +330,7 @@
         .card__filters .btn {
             background: #fff;
             color: black;
+            font-size: 16px;
         }
 
         .card__filters .btn:hover {
@@ -374,15 +377,15 @@
         <div class="container">
             <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3">
                 <div class="mb-2 mb-md-0">
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href="index.html">
                         <img src="logo.png" alt="Logo" height="28" class="d-inline-block align-text-top">
                     </a>
                 </div>
 
                 <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-                    <li class="nav-item"><a class="nav-link active" href="#">Início</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Produtos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Encomendar</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#produtos">Produtos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#licenciamento">Licenciamento</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Contactar</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Ajuda</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Sobre</a></li>
@@ -433,9 +436,7 @@
                     os processos da Sua
                     empresa.</p>
                 <div class="wrapper">
-                    <div class="typing-demo">
-                        Densevolvido em Moçambique.
-                    </div>
+                    <h1>densevolvido em <span class="auto-type"></span></h1>
                 </div>
 
             </div>
@@ -470,8 +471,8 @@
                                     automático e controle de inventário, o Facturix simplifica a gestão empresarial e
                                     aumenta a produtividade.</p>
                             </div>
-                            <button type="button" class="btn btn-primary">
-                                Saber mais</button>
+                            <a type="button" href="produto.html" class="btn btn-primary">
+                                Saber mais</a>
                         </div>
                     </article>
                 </div>
@@ -542,9 +543,11 @@
                             <header class="card__header mb-4"
                                 style="color: white; display: block;text-align: right;width: 50%;position: fixed;left: 390px;">
                                 <h1 class="card__header-title mb-4">Facturix Salário</h1>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse beatae consectetur
-                                    neque, obcaecati tempore asperiores reprehenderit sapiente dolor similique sequi!
-                                    Veniam eveniet corrupti officia atque et eos, corporis consequuntur deleniti.</p>
+                                <p>solução ideal para gerenciar processos relacionados à folha de pagamento de forma
+                                    eficiente e prática. Com
+                                    funcionalidades que automatizam o cálculo de salários, benefícios e impostos, o
+                                    Facturix garante conformidade legal e
+                                    precisão nos processos.</p>
                                 <button type="button" class="btn btn-primary">
                                     Saber mais</button>
                             </header>
@@ -555,7 +558,7 @@
         </div>
     </section>
 
-    <section class="produtos reveal" data-aos="fade-up">
+    <section class="produtos reveal" data-aos="fade-up" id="produtos">
 
         <div class="container">
             <div class="text-center">
@@ -1517,7 +1520,17 @@
             document.documentElement.scrollTop = 0;
         }
 
+
+        // typing funtion 
+        var typed = new Typed(".auto-type", {
+            strings: ["Moçambique"],
+            typeSpeed: 150,
+            backSpeed: 150,
+            loop: true
+        })
+
     </script>
+
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

@@ -60,6 +60,10 @@
            transition: all 0.3s ease;
        }
 
+       .nav-link.active {
+           text-decoration: underline;
+       }
+
        :root {
            --primary-color: #001F3F !important;
            --secondary-color: #004c70;
