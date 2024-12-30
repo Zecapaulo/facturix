@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facturix Software</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Container principal */
+        .containerg {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding-bottom: 2rem;
+            padding-top: 2rem;
+        }
+
+        /* Lado Esquerdo */
+        .left-section {
+            width: 426.2px;
+            height: 694.923px;
+            background-color: #D9E7FF;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Lado Direito */
+        .right-section {
+            width: 835.8px;
+            height: 694.923px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* Parte Superior: Duas colunas */
+        .top-columns {
+            display: flex;
+            gap: 20px;
+            flex: 1;
+        }
+
+        .column {
+            flex: 1;
+            background-color: #FFE0E5;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Parte Inferior: Coluna única */
+        .bottom-column {
+            flex: 1;
+            background-color: #E7FFD9;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .pt-8 {
+            padding-top: 10rem;
+        }
+
+        .header-title {
+            margin-top: .56rem;
+            color: #001f3f;
+            font-size: 3.75rem;
+            font-weight: 700;
+            line-height: 4.25rem;
+            text-align: center;
+        }
+
+        .header-text {
+            margin-top: 16px;
+            margin-bottom: 4rem;
+            background: linear-gradient(89.92deg, #001f3f 50.34%, #e75484 80.07%, #001f3f 99.89%);
+            background-clip: border-box;
+            background-clip: border-box;
+            background-clip: border-box;
+            -webkit-background-clip: text;
+            color: transparent;
+            font-size: 25px;
+            font-weight: 500;
+            line-height: 36px;
+            text-align: center;
+        }
+
+        .wrapper {
+            /*This part is important for centering*/
+            display: grid;
+            place-items: center;
+            margin-bottom: 40px;
+        }
+
+        .typing-demo {
+            width: 27ch;
+            animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 3px solid;
+            font-family: monospace;
+            font-size: 1.5em;
+            color: #252525;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0
+            }
+        }
+
+        @keyframes blink {
+            50% {
+                border-color: transparent
+            }
+        }
+
+        a .btn {
+            font-size: 1.1em;
+            padding: 14px 67px 14px 20px;
+            background-color: #001F3F;
+            color: #fff;
+            border-radius: 50px;
+            margin: auto;
+            border: 2px solid #001F3F;
+            margin: 3rem 3rem 3rem;
+            font-weight: 600;
+        }
+
+        a .btn:hover {
+            transform: scale(1.05);
+            background-color: transparent;
+            color: #001F3F;
+            border: 2px solid #001F3F;
+        }
+
+        a .btn:hover .ico {
+            margin-left: 17px;
+            background-color: #001F3F;
+            color: white;
+            transform: rotate(360deg);
+        }
+
+        a .btn:active {
+            background-color: #001F3F;
+            color: white;
+        }
+
+        .ico {
+            transition: all 0.5s;
+            background-color: white;
+            color: #001F3F;
+            width: 40px;
+            height: 40px;
+            padding: 5px;
+            border-radius: 20px;
+            position: absolute;
+            margin-left: 17px;
+            margin-top: -10px;
+            font-size: 1.5em;
+        }
+
+        .wrapper h4 {
+            margin: 4rem 30rem 0 30rem;
+            color: #001f3f;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 36px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="navbare">
+            <div class="container">
+                <header
+                    class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3">
+                    <div class="mb-2 mb-md-0">
+                        <a class="navbar-brand" href="index.html">
+                            <img src="logo.png" alt="Logo" height="28" class="d-inline-block align-text-top">
+                        </a>
+                    </div>
+
+                    <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="index.html#produtos">Produtos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#licenciamento">Licenciamento</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Contactar</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Ajuda</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Sobre</a></li>
+                    </ul>
+
+                    <div class="col-md-3 text-end">
+                        <button type="button" class="btn btn-primary">
+                            <i class="fa fa-headset m-2"></i> Suporte</button>
+                    </div>
+                </header>
+            </div>
+        </div>
+        <section class="header-1 reveal" data-aos="fade-up">
+            <div class="container">
+                <div class="pt-8 text-center">
+                    <!-- <img class="d-block mx-auto" src="icon.png" alt="" width="72" height="72"> -->
+                    <h2 class="header-title">Facturix Gestão a solução ideal para gerenciar a sua empresa</h2>
+                    <p class="header-text">Eficiente, rápido, fácil de usar, com integração completa para todos
+                        os processos da Sua
+                        empresa.</p>
+                    <div class="wrapper">
+                        <div class="iphone-mockup"><img src="tela.png" class="device shadow" style="width: 60%;">
+                        </div>
+                        <h4>"A solução ideal para gerenciar clientes, fornecedores e stocks de forma eficiente.
+                            Com recursos como ajuste de preços
+                            automático e controle de inventário, o Facturix simplifica a gestão empresarial e
+                            aumenta a produtividade."</h4>
+                    </div>
+                    <a href="#">
+                        <div class="btn">
+                            Solicitar demostração
+
+                            <i class="ico fa fa-headset"></i>
+
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- <div class="header-blue">
+            <div class="container hero">
+                <div class="row  align-items-center">
+                    <div class="col-12 col-lg-6 col-xl-5 offset-xl-1 ">
+                        <h1>Facturix Restaurante</h1>
+                        <p>A solução perfeita para otimizar a gestão financeira da sua empresa. Com funcionalidades
+                            avançadas para controle de
+                            fluxo de caixa, conciliação bancária, e geração de relatórios financeiros</p>
+                        <button type="button" class="btn btn-primary">
+                            Solicitar demostração</button>
+                    </div>
+                    <div class="col-md-5 col-lg-5 offset-lg-1 offset-xl-0 d-none d-lg-block phone-holder">
+                        <div class="iphone-mockup"><img src="tela.png" class="device">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </div>
+    <section class="produtos reveal" data-aos="fade-up">
+        <div class="container" style="min-height: 728px;">
+            <div class="text-center">
+                <h2 class="header-title">Características</h2>
+                <p class="header-text">Aprofunde-se nas características e potencialidades do Facturix Gestão</p>
+            </div>
+            <div id="content-left">
+
+                <div id="spacer">
+                </div>
+
+                <h3>Facturix Gestão - <span class="produtos-descricao"> sistema de Gestão
+                        Profissional</span>
+                </h3>
+                <p>Facturix Gestão é um programa de Gestão Comercial Certificado, que permite o controle de
+                    vendas,
+                    compras, contas correntes de clientes e fornecedores, e o controlo de stocks. Trata-se de uma
+                    aplicação com
+                    elevado grau de configuração e com vários módulos adicionais disponíveis, o que a torna numa solução
+                    de
+                    Gestão com uma atrativa relação Preço/Qualidade, podendo ser implementada com êxito na maioria das
+                    Micro e
+                    PME's do nosso país.</p>
+                <p></p>
+                <p>Este aplicativo substitui o WinSig - Sistema Integrado de Gestão e o WinSigPRO - Sistema Integrado de
+                    Gestão
+                    Profissional.</p>
+                <p>Passamos a apresentar algumas das caraterísticas mais relevantes da aplicação:</p>
+                <h4>Artigos</h4>
+                <ul>
+                    <li>Código alfanumérico de 15 carateres</li>
+                    <li>Código de barras (EAN-13 automático)</li>
+                    <li>Descrição normal mais descrição sem limite de carateres</li>
+                    <li>Artigo simples, compostos, grupo, catálogo (cores e tamanhos) e mão de obra</li>
+                    <li>Controle de lotes e números de série</li>
+                    <li>Grupo, família e sub família de artigos</li>
+                    <li>Fotografia do artigo</li>
+                    <li>Fórmula (cubicagem) para calculo das quantidades, com base numa função matemática (com
+                        parâmetros:
+                        volumes, x, y e z) definida pelo utilizador, na emissão de documentos</li>
+                </ul>
+                <br>
+                <h4>Clientes</h4>
+                <ul>
+                    <li>Busca de nome e morada através do Número de Contribuinte ao VIES (Sistema Europeu Informações
+                        IVA)</li>
+                    <li>Morada de faturação e morada de envio</li>
+                    <li>Tabela de preços de artigos para cada cliente</li>
+                    <li>Tabela de descontos de artigos para cada cliente</li>
+                    <li>Limite de crédito</li>
+                    <li>Zonas</li>
+                </ul>
+                <br>
+                <h4>Fornecedores</h4>
+                <ul>
+                    <li>Tabela de preços de artigos</li>
+                    <li>Tabela de descontos de artigos</li>
+                    <li>Limite de crédito</li>
+                    <li>Zonas</li>
+                </ul>
+                <br>
+                <h4>Faturação (Vendas/Compras)</h4>
+                <ul>
+                    <li>Emissão de todos os documentos necessários à faturação: faturas, faturas-recibo, faturas
+                        despesas (não
+                        influencia volume de negócios), faturas à consignação, notas de crédito, notas de débito,
+                        orçamentos,
+                        faturas pró-forma, encomendas, faturas de compra, compras a dinheiro, requisições, notas de
+                        credito de
+                        fornecedores, etc.</li>
+                    <li>Dependendo do documento, a atualização dos stocks e das contas correntes de
+                        clientes/fornecedores é
+                        feita automaticamente</li>
+                    <li>Várias séries de numeração de documentos</li>
+                    <li>Movimentação de stocks por armazém</li>
+                    <li>Artigos podem ser lançados por código e código de barras. Podem ser também lançados pela leitura
+                        de
+                        ficheiro de texto criado por leitor portátil de códigos de barras</li>
+                    <li>Os artigos podem ainda ser lançados pela leitura de etiqueta de códigos de barra emitidos pelas
+                        balanças
+                        onde conta o peso/quantidade</li>
+                    <li>Recurso a formulas (cubicagem) para calcular as quantidades a movimentar, calculadas com base
+                        numa
+                        função matemática (com parâmetros: volumes, x, y e z) definida pelo utilizador</li>
+                    <li>Transformação seletiva de documentos. Por exemplo, orçamento em fatura, onde indica os artigos e
+                        as
+                        quantidades que pretende transformar</li>
+                    <li>Copiar documento existente, poupando tempo na elaboração do novo documento semelhante a um outro
+                        feito
+                        anteriormente</li>
+                    <li>Retenção de IRS/IRC na fonte</li>
+                    <li>Imputação de despesas de aquisição (documentos de compra) que vão afetar o preço de custo dos
+                        artigos
+                    </li>
+                    <li>Impressão de etiquetas para os artigos movimentados num documento</li>
+                    <li>Possibilidade de introduzir uma descrição para o artigo sem limite de carateres</li>
+                    <li>Atualização dos preços de venda quando se introduzem documentos de compra, com base na alteração
+                        dos
+                        preços de compra</li>
+                </ul>
+                <br>
+                <h4>Documentos de Transporte</h4>
+                <ul>
+                    <li>Emissão de vários tipos de documentos de transporte, como guias de remessa, guias de transporte
+                        a
+                        clientes e a fornecedores, guias à consignação e guias de movimentação de ativos próprios, entre
+                        outros
+                    </li>
+                    <li>Possibilidade de configurar o programa para comunicar o documento de transporte à AT assim que o
+                        mesmo é
+                        gravado (WebServices), ou gerar um ficheiro Saf-t diário para comunicação de vários documentos
+                        de
+                        transporte em simultâneo</li>
+                    <li>Várias séries de numeração de documentos</li>
+                    <li>Movimentação de stocks por armazém conforme o tipo de documento de transporte emitido.</li>
+                    <li>Transformação seletiva de documentos. Por exemplo, transformar encomenda em guia de transporte a
+                        Cliente, onde seleciona da encomenda os artigos e as quantidades que pretende transportar</li>
+                    <li>Copiar documento existente, poupando tempo na elaboração do novo documento. Opção interessante
+                        sempre
+                        que transportar os mesmos bens vários dias seguidos</li>
+                </ul>
+                <br>
+                <h4>Contas correntes</h4>
+                <ul>
+                    <li>Emissão dos documentos: Recibos, Pagamentos, Saques, Aceites, Recibos RIC e Saques RIC, sendo
+                        este
+                        últimos emitidos por quem aderiu ou a clientes que tenham aderido ao Regime - IVA de Caixa</li>
+                    <li>Introdução dos movimentos de clientes/fornecedores só pelos valores totais dos documentos (para
+                        recuperação de movimentos de extrato antigos)</li>
+                    <li>Emissão de recebimentos e pagamentos parciais (deixando pendente apenas o valor em falta)</li>
+                    <li>A indicação dos documentos a liquidar faz-se pela seleção numa grelha desses mesmos documentos
+                    </li>
+                    <li>Retenção de IRS/IRC e concessão de descontos nos documentos de liquidação</li>
+                </ul>
+                <br>
+                <h4>Stocks</h4>
+                <ul>
+                    <li>Emissão de documentos de entrada e saída</li>
+                    <li>Artigos podem ser lançados por código e código de barras. Também podem ser lançados pela leitura
+                        de
+                        ficheiro de texto criado por leitor portátil de códigos de barras</li>
+                    <li>Recurso a formulas (cubicagem) para calcular as quantidades a movimentar, calculadas com base
+                        numa
+                        função matemática (com parâmetros: volumes, x, y e z) definida pelo utilizador</li>
+                    <li>Transferência entre armazéns</li>
+                </ul>
+                <br>
+                <h4>Utilitários</h4>
+                Facturix Gestão dispõe de um elevado número de opções que lhe permitem executar diversas
+                tarefas.
+                <ul>
+                    <li>Etiquetas de artigos, clientes e fornecedores</li>
+                    <li>Transformação de documentos. Pode por exemplo, transformar as guias de remessa em faturas</li>
+                    <li>Emissão de resumos de faturas</li>
+                    <li>Alterar códigos de artigos</li>
+                    <li>Gerar códigos de artigos</li>
+                    <li>Atualização de preços</li>
+                    <li>Exportar dados</li>
+                    <li>Atribuir códigos de barras</li>
+                    <li>Gerar ficheiro Saf-t para a comunicação no site e-Fatura, com possibilidade de validação e envio
+                        automático do ficheiro. Ou gerar o Saf-t diário para comunicação dos documentos de transporte
+                        ou, ainda,
+                        gerar um Saf-t anual que pode ser solicitado no caso de uma inspeção</li>
+                </ul>
+                <br>
+                <h4>Informações de gestão</h4>
+                São inúmeros os mapas que o Facturix Gestão põe ao dispor do utilizador.
+                <ul>
+                    <li>Clientes: Extratos; Documentos vencidos; Balancetes; Tesouraria; Avisos de pagamento; Mapas
+                        recapitulativos, etc.</li>
+                    <li>Fornecedores: Extratos; Documentos vencidos; Balancetes; Tesouraria; Mapas recapitulativos, etc.
+                    </li>
+                    <li>Stocks: Inventário; Extratos; Lotes; Movimentos dos números de série de artigos; Artigos sem
+                        movimentos;
+                        etc.</li>
+                    <li>Vendas: Por cliente; Por vendedor; Por artigo; Margem de lucro; Comissões; Volume de vendas;
+                        Retenção de
+                        IRS/IRC; etc.</li>
+                    <li>Fornecedores: Por fornecedor; Por artigo; Volume de vendas; Retenção de IRS/IRC, etc.</li>
+                    <li>Análise financeira: ABC de clientes; ABC de fornecedores; ABC de artigos; Gráfico de vendas;
+                        Análise de
+                        recebimentos; Volume de negócios; etc.</li>
+                </ul>
+                <br>
+                <h4>Outras características</h4>
+                <ul>
+                    <li>Dispõe também de um utilitário para fazer e repor cópias de segurança</li>
+                    <li>A ajuda está disponível pressionando a tecla F1</li>
+                    <li>Controle de acessos por utilizador. Para cada utilizador podem ser definidas as opções a que ele
+                        tem
+                        acesso dentro do programa</li>
+                    <li>Envio de mensagens entre os utilizadores do programa</li>
+                    <li>Alertas de stocks em ruptura, de limites de crédito excedido, de documentos pendentes, etc, na
+                        altura
+                        que se está a faturar</li>
+                    <li>Quando fica disponível uma nova versão do programa, a primeira vez que executa o
+                        Facturix Gestão, receberá uma mensagem a informá-lo</li>
+                </ul>
+                <br>
+                Requisitos minímos:
+                <ul>
+                    <li>Windows 7 ou superior</li>
+                    <li>Resolução do ecrã 1024x768</li>
+                    <li>Rato ou apontador compativel</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-bottom small py-3 border-top border-white border-opacity-10">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start py-1">
+                        <p class="m-0 text-white text-opacity-75">&copy;
+                            <script>document.write(new Date().getFullYear());</script> <a class="text-reset"
+                                href="techzone.co.mz">Techzone</a>. Todos os
+                            direitos reservados.
+                        </p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end py-1">
+                        <ul class="nav justify-content-center justify-content-md-end list-unstyled footer-link-01 m-0">
+                            <li class="p-0 mx-3 ms-md-0 me-md-3"><a href="#" class="text-white text-opacity-75">Privace
+                                    &amp; Policy</a></li>
+                            <li class="p-0 mx-3 ms-md-0 me-md-3"><a href="#"
+                                    class="text-white text-opacity-75">Faq's</a>
+                            </li>
+                            <li class="p-0 mx-3 ms-md-0 me-md-3"><a href="#" class="text-white text-opacity-75">Get a
+                                    Quote</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- FIM DO FOOTER -->
+
+    <script>
+        // Função para verificar se a seção está visível na tela
+        const sections = document.querySelectorAll('.reveal');
+
+        function revealOnScroll() {
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                const isVisible = rect.top < window.innerHeight && rect.bottom >= 0;
+
+                if (isVisible) {
+                    section.classList.add('visible');  // Adiciona a classe para a animação
+                } else {
+                    section.classList.remove('visible');  // Remove a classe quando sair da tela
+                }
+            });
+        }
+
+        // Chama a função quando a página rolar
+        window.addEventListener('scroll', revealOnScroll);
+
+        // Chama a função para revelar as seções já visíveis ao carregar a página
+        document.addEventListener('DOMContentLoaded', revealOnScroll);
+        // Get the button
+        let mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+    </script>
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
