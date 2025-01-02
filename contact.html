@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facturix Software</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .contact-area {
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        }
+
+        @media only screen and (max-width:768px) {
+            .contact {
+                margin-bottom: 60px;
+            }
+        }
+
+        .contact input {
+            background: #fff;
+            border: 1px solid #c4c4c4;
+            border-radius: 3px;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            color: #232434;
+            font-size: 16px;
+            height: 60px;
+            padding: 10px;
+            width: 100%;
+            font-family: 'poppins', sans-serif;
+            padding-left: 30px;
+            -webkit-transition: all 0.3s ease 0s;
+            -o-transition: all 0.3s ease 0s;
+            transition: all 0.3s ease 0s;
+            margin: 2rem;
+        }
+
+        .contact select {
+            background: #fff;
+            border: 1px solid #c4c4c4;
+            border-radius: 3px;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            color: #232434;
+            font-size: 16px;
+            padding: 10px;
+            width: 100%;
+            font-family: 'poppins', sans-serif;
+            padding-left: 30px;
+            -webkit-transition: all 0.3s ease 0s;
+            -o-transition: all 0.3s ease 0s;
+            transition: all 0.3s ease 0s;
+            margin: 2rem;
+        }
+
+        .contact textarea {
+            background: #fff;
+            border: 1px solid #c4c4c4;
+            border-radius: 3px;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            color: #232434;
+            font-size: 16px;
+            padding: 10px;
+            width: 100%;
+            font-family: 'poppins', sans-serif;
+            padding-left: 30px;
+            -webkit-transition: all 0.3s ease 0s;
+            -o-transition: all 0.3s ease 0s;
+            transition: all 0.3s ease 0s;
+            margin: 2rem;
+        }
+
+        .contact input:focus {
+            background: #f9f9f9;
+            border: 1px solid #fff;
+            color: #232434;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            outline: 0 none;
+        }
+
+        .contact textarea:focus {
+            background: #f9f9f9;
+            border: 1px solid #fff;
+            color: #232434;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            outline: 0 none;
+        }
+
+        .form-control::placeholder {
+            color: #232434;
+            opacity: 1;
+        }
+
+        .btn-contact-bg {
+            border-radius: 30px;
+            color: #fff;
+            outline: medium none !important;
+            padding: 15px 27px;
+            text-transform: capitalize;
+            -webkit-transition: all 0.3s ease 0s;
+            -o-transition: all 0.3s ease 0s;
+            transition: all 0.3s ease 0s;
+            background: #001F3F;
+            font-family: 'poppins', sans-serif;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .btn-contact-bg:hover,
+        .btn-contact-bg:focus {
+            background: #232434;
+            color: #fff;
+        }
+
+        /*START ADDRESS*/
+
+        .single_address {
+            overflow: hidden;
+            margin-bottom: 10px;
+            padding-left: 40px;
+            width: 100%;
+        }
+
+        @media only screen and (max-width:768px) {
+            .single_address {
+                padding-left: 0px;
+            }
+        }
+
+        .single_address i {
+            background: #f6f6f6;
+            color: #001F3F;
+            border-radius: 30px;
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            float: left;
+            margin-right: 14px;
+            font-size: 22px;
+            -webkit-box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            -webkit-transition: all 0.3s ease 0s;
+            -o-transition: all 0.3s ease 0s;
+            transition: all 0.3s ease 0s;
+        }
+
+        .single_address:hover i {
+            background: #001F3F;
+            color: #fff;
+        }
+
+        .single_address h4 {
+            font-size: 18px;
+            margin-bottom: 0px;
+            overflow: hidden;
+            font-weight: 600;
+        }
+
+        .single_address p {
+            overflow: hidden;
+            margin-top: 5px;
+        }
+
+        .section-title h1 {
+            font-size: 44px;
+            font-weight: 500;
+            margin-top: 0;
+            position: relative;
+            text-transform: capitalize;
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            padding: 0 10px;
+            width: 70%;
+            margin: auto;
+            letter-spacing: 1px;
+        }
+
+        .section-title {
+            margin-bottom: 60px;
+        }
+
+        .text-center {
+            text-align: center !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbare">
+        <div class="container">
+            <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3">
+                <div class="mb-2 mb-md-0">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="logo.png" alt="Logo" height="28" class="d-inline-block align-text-top">
+                    </a>
+                </div>
+
+                <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#produtos">Produtos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#licenciamento">Licenciamento</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Contactar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">Ajuda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Sobre</a></li>
+                </ul>
+
+                <div class="col-md-3 text-end">
+                    <form action="contact.html">
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fa fa-headset m-2"></i> Suporte</button>
+                    </form>
+                </div>
+            </header>
+        </div>
+    </div>
+    <!-- Navbar -->
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="logo.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+                J. M. Neves
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Downloads</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Encomendar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contactar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">Ajuda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Sobre</a></li>
+                </ul>
+                <div class="col-md-3 text-end">
+                    <button type="button" class="btn btn-outline-primary me-2">Login</button>
+                    <button type="button" class="btn btn-primary">Sign-up</button>
+                </div>
+            </div>
+        </div>
+    </nav> -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-arrow-up" aria-hidden="true"></i>
+    </button>
+    <!-- Hero Section -->
+    <section class="header-1 reveal" data-aos="fade-up">
+        <div class="container" style="min-height: 100vh;">
+            <div id="contact" class="contact-area section-padding">
+                <div class="pt-8 text-center">
+                    <h2 class="header-title">Contacte-nos</h2>
+                    <p class="header-text">Se tiver problemas ou precisar de ajuda, não hesite em contactar-nos para
+                        obter suporte. </p>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12 d-flex justify-content-between">
+                        <div class="single_address">
+                            <i class="fa fa-map-marker"></i>
+                            <h4>Morada</h4>
+                            <p>Rua do Bagamoyo nº.112 - Maputo
+                                Moçambique</p>
+                        </div>
+                        <div class="single_address">
+                            <i class="fa fa-envelope"></i>
+                            <h4>Suporte Técnico</h4>
+                            <p>suporte@facturix.co.mz</p>
+                        </div>
+                        <div class="single_address">
+                            <i class="fa fa-phone"></i>
+                            <h4>Contactos</h4>
+                            <p>+258 87 516 27 93</p>
+                        </div>
+                        <div class="single_address">
+                            <i class="fa fa-clock"></i>
+                            <h4>Horário de atendimento</h4>
+                            <p>Seg - Sex: 08.00 - 17.00. <br>Sab: 9.00 - 14.00</p>
+                        </div>
+                    </div><!--- END COL -->
+                    <div class="col-lg-12">
+                        <div class="contact">
+                            <form class="form" name="enq" method="post" action="contact.php"
+                                onsubmit="return validation();">
+                                <div class="row">
+                                    <div class="form-group col-md-12">
+                                        <select class="form-control" id="product" name="product" required="required"
+                                            title="" class="select select-pull-down select-null">
+                                            <option data-v-01a6e0e8="" disabled="disabled" selected="selected"
+                                                hidden="hidden" value="">Selecione o producto</option>
+                                            <option data-v-01a6e0e8="" value="0" style="color: rgb(37, 37, 37);">
+                                                Facturix Gestão
+                                            </option>
+                                            <option data-v-01a6e0e8="" value="1" style="color: rgb(37, 37, 37);">
+                                                Facturix Salário
+                                            </option>
+                                            <option data-v-01a6e0e8="" value="2" style="color: rgb(37, 37, 37);">
+                                                Facturix Tesouraria
+                                            </option>
+                                            <option data-v-01a6e0e8="" value="3" style="color: rgb(37, 37, 37);">
+                                                Facturix Restaurante
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <input type="text" name="name" class="form-control" placeholder="Nome"
+                                            required="required">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <input type="email" name="email" class="form-control" placeholder="Email"
+                                            required="required">
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <input type="text" name="subject" class="form-control" placeholder="Assunto"
+                                            required="required">
+                                    </div>
+                                    <div class="form-group col-md-12">
+                                        <textarea rows="6" name="message" class="form-control"
+                                            placeholder="Descreva a sua mensagem" required="required"></textarea>
+                                    </div>
+                                    <div class="col-md-12 text-center">
+                                        <button type="submit" value="Send message" name="submit" id="submitButton"
+                                            class="btn btn-contact-bg" title="Submit Your Message!">Enviar
+                                            Mensagem</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div><!--- END COL -->
+
+                </div><!--- END ROW -->
+            </div><!--- END CONTAINER -->
+        </div>
+    </section>
+
+
+    <!-- maps  -->
+    <section class="produtos reveal" data-aos="fade-up">
+        <div class="container">
+            <div class=" pb-4 text-center">
+                <h2 class="header-title">Cordenadas</h2>
+            </div>
+            <div class=" border shadow text-center">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d1793.4196533781817!2d32.568565!3d-25.973310000000005!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-PT!2sus!4v1735808386686!5m2!1spt-PT!2sus"
+                    height="450" style="border:0; width: 100%;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-bottom small py-3 border-top border-white border-opacity-10">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start py-1">
+                        <p class="m-0 text-white text-opacity-75">&copy;
+                            <script>document.write(new Date().getFullYear());</script> <a class="text-reset"
+                                href="techzone.co.mz">Techzone</a>. Todos os
+                            direitos reservados.
+                        </p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end py-1">
+                        <ul class="nav justify-content-center justify-content-md-end list-unstyled footer-link-01 m-0">
+                            <li class="p-0 mx-3 ms-md-0 me-md-3"><a href="#" class="text-white text-opacity-75">Privace
+                                    &amp; Policy</a></li>
+                            <li class="p-0 mx-3 ms-md-0 me-md-3"><a href="#"
+                                    class="text-white text-opacity-75">Faq's</a>
+                            </li>
+                            <li class="p-0 mx-3 ms-md-0 me-md-3"><a href="#" class="text-white text-opacity-75">Get a
+                                    Quote</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- FIM DO FOOTER -->
+
+    <!-- Scripts -->
+    <script src="min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
