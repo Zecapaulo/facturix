@@ -40,3 +40,11 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+// typing funtion
+var typed = new Typed(".auto-type", {
+  strings: ["Moçambique"],
+  typeSpeed: 150,
+  backSpeed: 150,
+  loop: true,
+});
