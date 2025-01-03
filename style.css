@@ -65,7 +65,7 @@
        }
 
        :root {
-           --primary-color: #001F3F !important;
+           --primary-color: #001f3f !important;
            --secondary-color: #004c70;
            --background-color: rgb(66 82 250);
            --text-color: #000000;
@@ -76,8 +76,8 @@
        }
 
        .table-dark {
-           --bs-table-bg: #001F3F !important;
-           border-color: #001F3F !important;
+           --bs-table-bg: #001f3f !important;
+           border-color: #001f3f !important;
        }
 
        .mr {
@@ -86,11 +86,11 @@
 
 
        .nav-link:hover {
-           color: #001F3F !important;
+           color: #001f3f !important;
        }
 
        .nav-link.active {
-           color: #001F3F !important;
+           color: #001f3f !important;
        }
 
        p {
@@ -158,7 +158,8 @@
        }
 
        .list-inline li {
-           font-size: 14px;
+           font-size: 1.25rem;
+           line-height: 2;
        }
 
 
@@ -209,7 +210,7 @@
        }
 
        nav .btn {
-           background-color: #001F3F;
+           background-color: #001f3f;
            color: white;
        }
 
@@ -322,6 +323,18 @@
            margin: 30px auto 0 0;
        }
 
+       .btn-secondary {
+           background: #001f3f;
+           border: none;
+           font-weight: 600;
+       }
+
+       .btn-secondary:hover {
+           background: transparent;
+           color: #001f3f;
+           border: 1px solid #001f3f;
+       }
+
        .btn-primary {
            background-color: #fff;
            color: var(--text-color);
@@ -339,7 +352,7 @@
        .text-end button {
            align-items: center;
            display: flex;
-           background-color: #001F3F;
+           background-color: #001f3f;
            color: white;
        }
 
@@ -440,13 +453,13 @@
 
        .text-bg-primary {
            color: #fff !important;
-           background-color: #001F3F !important;
+           background-color: #001f3f !important;
        }
 
        .tab-content {
            background-color: #fbfbfb;
            color: #1a1a1a;
-           padding: 20px;
+           padding: 4rem;
            padding-top: 5rem;
            border-radius: 5px;
            margin-top: 8px;
@@ -656,7 +669,7 @@
        }
 
        .text-primary {
-           color: #001F3F !important;
+           color: #001f3f !important;
        }
 
        .btn-link .float-right {
@@ -681,7 +694,7 @@
        }
 
        .footer {
-           background-color: #001F3F;
+           background-color: #001f3f;
        }
 
        .footer-link-01 li+li {
@@ -1271,11 +1284,11 @@
        a .btn {
            font-size: 1.1em;
            padding: 14px 67px 14px 20px;
-           background-color: #001F3F;
+           background-color: #001f3f;
            color: #fff;
            border-radius: 50px;
            margin: auto;
-           border: 2px solid #001F3F;
+           border: 2px solid #001f3f;
            margin: 3rem 3rem 3rem;
            font-weight: 600;
        }
@@ -1283,26 +1296,26 @@
        a .btn:hover {
            transform: scale(1.05);
            background-color: transparent;
-           color: #001F3F;
-           border: 2px solid #001F3F;
+           color: #001f3f;
+           border: 2px solid #001f3f;
        }
 
        a .btn:hover .ico {
            margin-left: 17px;
-           background-color: #001F3F;
+           background-color: #001f3f;
            color: white;
            transform: rotate(360deg);
        }
 
        a .btn:active {
-           background-color: #001F3F;
+           background-color: #001f3f;
            color: white;
        }
 
        .ico {
            transition: all 0.5s;
            background-color: white;
-           color: #001F3F;
+           color: #001f3f;
            width: 40px;
            height: 40px;
            padding: 5px;
